@@ -90,11 +90,12 @@
                                     
                                         <li><a href="#">PRODUCTS <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="#">GATE VALVE</a></li>
-                                                <li><a href="#">CHECK VALVE</a></li>
-                                                <li><a href="#">GLOBE VALVE</a></li>
-                                                <li><a href="#">STEEL VALVE</a></li>
-                                                <li><a href="#">FORGED VALVE</a></li>
+                                            <li><a href="#">GATE VALVE</a></li>
+                                            <li><a href="#">GLOBE VALVE</a></li>
+                                            <li><a href="#">SWING CHECK VALVE</a></li>
+                                            <li><a href="#">BALL VALVE</a></li>
+                                            <li><a href="#">FORGED VALVE</a></li>
+                                            <li><a href="#">BUTTERFLY VALVE</a></li>
                                             </ul>
                                         </li>
                                        
@@ -169,10 +170,11 @@
                                 </h3>
                                 <ul>
                                     <li><a href="#">GATE VALVE</a></li>
-                                    <li><a href="#">CHECK VALVE</a></li>
                                     <li><a href="#">GLOBE VALVE</a></li>
-                                    <li><a href="#">STEEL VALVE</a></li>
+                                    <li><a href="#">SWING CHECK VALVE</a></li>
+                                    <li><a href="#">BALL VALVE</a></li>
                                     <li><a href="#">FORGED VALVE</a></li>
+                                    <li><a href="#">BUTTERFLY VALVE</a></li>
                                 </ul>
     
                             </div>
@@ -196,6 +198,7 @@
                                 <p>
                                     <%--200, D-block, Green lane USA <br>
                                     +10 367 467 8934 <br>--%>
+                                    SHED NO 17/1, GAUTAM SHAH INDUSTRIAL ESTATE, B/H MANIYAR TRAILER, NR SUNSHINE ESTATE, RAKHIAL, AHMEDABAD, GUJARAT, 380023<br>
                                     contact@ztechvalves.in<br>
                                     Ztechvalves@gmail.com
                                 </p>

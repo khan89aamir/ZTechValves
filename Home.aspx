@@ -21,7 +21,7 @@
                                     (90 degrees) around its axis, the medium<br />
                                     can flow through or is blocked. </p>
                               <br />
-                                 Moreover, they are more resistant against contaminated media than most other<br /> types of valves. 
+                                 Moreover, they are more resistant against contaminated media than most other<br /> types of valves.
 
 
                             </div>
