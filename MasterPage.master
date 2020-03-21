@@ -48,7 +48,7 @@
      .centerDiv {
   margin: auto;
   width: 60%;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 5px;
 }
     </style>
@@ -125,7 +125,7 @@
                                         </li>
                                        
                                         <li><a href="/AboutUS.aspx">ABOUT US</a></li>
-                                        <li><a href="#">CONTACT US</a></li>
+                                        <li><a href="Contactus.aspx">CONTACT US</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -211,7 +211,7 @@
                                 </h3>
                                 <ul>
                                     <li><a href="/AboutUS.aspx">ABOUT US</a></li>
-                                    <li><a href="#">CONTACT US</a></li>
+                                    <li><a href="Contactus.aspx">CONTACT US</a></li>
                                 </ul>
                             </div>
                         </div>
