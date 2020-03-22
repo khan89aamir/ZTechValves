@@ -976,17 +976,17 @@ h3 {
 }
 
 /* line 118, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
-.header-area .main-header-area .main-menu ul li a {
-  color: #727272;
-  font-size: 15px;
-  text-transform: capitalize;
-  font-weight: 500;
-  display: inline-block;
-  padding: 0px 0px 0px 0px;
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  text-transform: capitalize;
-}
+    .header-area .main-header-area .main-menu ul li a {
+        color: #00090e;
+        font-size: 18px;
+        text-transform: capitalize;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 0px 0px 0px;
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        text-transform: capitalize;
+    }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 118, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
@@ -1061,7 +1061,7 @@ h3 {
   left: 0;
   top: 160%;
   background: #fff;
-  width: 200px;
+  width: 300px;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
   opacity: 0;
@@ -3299,7 +3299,9 @@ sup,
 sub,
 u,
 del {
-  color: #ff5e13;
+    color: #033367;
+    font-size:medium;
+    font-weight:500;
 }
 
 /* line 93, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
