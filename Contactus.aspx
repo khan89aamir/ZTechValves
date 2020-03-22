@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address'" placeholder="Email">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address'" placeholder="Enter Email Address">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -167,4 +167,3 @@
                 </div>
     <br />
 </asp:Content>
-

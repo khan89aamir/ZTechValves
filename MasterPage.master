@@ -218,8 +218,8 @@ ul.Mylst li {
                             <div class="short_contact_list">
                                 <ul>
                                     <li><a href="#"> <i ></i></a></li>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i>contact@ztechvalves.in</a></li>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i>Ztechvalves@gmail.com</a></li>
+                                    <li><a href="mailto:contact@ztechvalves.in"> <i class="fa fa-envelope"></i>contact@ztechvalves.in</a></li>
+                                    <li><a href="mailto:Ztechvalves@gmail.com"> <i class="fa fa-envelope"></i>Ztechvalves@gmail.com</a></li>
                                     <li><a href="#"> <i class="fa fa-phone"></i> Gulam Rasool : +91 9137738202</a></li>
                                     <li><a href="#"> <i class="fa fa-phone"></i> Shakeel Ahmad : +91 9967716771</a></li>
                                 </ul>
@@ -257,7 +257,7 @@ ul.Mylst li {
                                         </li>
                                        
                                         <li><a href="/AboutUS.aspx"><span class="MainMenuItem"> ABOUT US </span></a></li>
-                                        <li><a href="#"><span class="MainMenuItem"> CONTACT US </span></a></li>
+                                        <li><a href="Contactus.aspx"><span class="MainMenuItem"> CONTACT US </span></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -358,6 +358,8 @@ ul.Mylst li {
                                     SHED NO 17/1, GAUTAM SHAH INDUSTRIAL ESTATE, B/H MANIYAR TRAILER, NR SUNSHINE ESTATE, RAKHIAL, AHMEDABAD, GUJARAT, 380023<br>
                                     contact@ztechvalves.in<br>
                                     Ztechvalves@gmail.com
+                                    <%--<a href="mailto:contact@ztechvalves.in">contact@ztechvalves.in</a><br>
+                                    <a href="mailto:Ztechvalves@gmail.com">Ztechvalves@gmail.com</a>--%>
                                 </p>
                             </div>
                         </div>

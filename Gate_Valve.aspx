@@ -85,7 +85,6 @@ CF8 M</pre>
     <br />
     <div class="card center">
         <font size="5" color="#05376d">CONSTRUCTION FEATURES:</font>
-       
         <ul class="Mylst">
             <li>Valves Code API 600 / BS 1414</li>
             <li>End to End Dimension ANSI B 16.10 / 2080</li>
@@ -100,22 +99,17 @@ CF8 M</pre>
             <li>Others Outside screw and yoke</li>
             <li>Gear Operation ( for DIA>14")</li>
         </ul>
-        <br />
     </div>
     <br />
+
     <div class="card center">
         <font size="5" color="#05376d">SIZE :</font>
-
         <ul class="Mylst">
             <li>ANSI 150 # 50 mm TO 500 mm</li>
             <li>ANSI 300 # 50 mm TO 400 mm</li>
             <li>ANSI 600 # 50 mm TO 300 mm</li>
         </ul>
-
     </div>
     <br />
 
-
-
 </asp:Content>
-
