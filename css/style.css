@@ -75,8 +75,8 @@ button {
 
 /* line 41, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */
 h1, h2, h3, h4, h5 {
-  font-family: "Poppins", sans-serif;
-  color: #1F1F1F;
+    font-family: "Times New Roman", Times, serif;
+    color: #1F1F1F;
 }
 
 /* line 45, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */
@@ -112,10 +112,10 @@ p {
 
 /* line 70, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */
 label {
-  color: #7e7e7e;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
+    color: #0f0125;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 /* line 76, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/theme-default.scss */

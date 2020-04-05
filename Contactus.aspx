@@ -4,118 +4,118 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
    
+  <script language="javascript">
+      function checkForm(form) {
 
-    <script language="javascript">
-        function checkForm(form) {
+          if (form.name.value == "") {
+              alert("Please Enter a Name");
+              form.name.focus();
+              return false;
+          }
 
-            if (form.name.value == "") {
-                alert("Please Enter a Name");
-                form.name.focus();
-                return false;
-            }
+          if (form.mobileno.value == "") {
+              alert("Please Enter Mobile No.");
+              form.subject.focus();
+              return false;
+          }
 
-            if (form.mobileno.value == "") {
-                alert("Please Enter Mobile No.");
-                form.subject.focus();
-                return false;
-            }
+          if (form.mobileno.value.length < 10) {
+              alert("Please Enter a 10 - digit Mobile No");
+              form.mobileno.focus();
+              return false;
+          }
 
-            if (form.mobileno.value.length < 10) {
-                alert("Please Enter a 10 - digit Mobile No");
-                form.mobileno.focus();
-                return false;
-            }
+          if (form.mobileno.value != "") {
+              mobno = form.mobileno.value;
+              charpos = mobno.charAt(0);
+              if (charpos == "0") {
+                  alert("Please Enter only 10 didgit Mobile No.Do not start with 0");
+                  return false;
+              }
+          }
 
-            if (form.mobileno.value != "") {
-                mobno = form.mobileno.value;
-                charpos = mobno.charAt(0);
-                if (charpos == "0") {
-                    alert("Please Enter only 10 didgit Mobile No.Do not start with 0");
-                    return false;
-                }
-            }
+          if (form.email.value == "") {
+              alert("Kindly Enter E-mail ID.");
+              form.email.focus();
+              return false;
+          }
 
-            if (form.email.value == "") {
-                alert("Kindly Enter E-mail ID.");
-                form.email.focus();
-                return false;
-            }
+          if (form.email.value.length != 0) {
+              var e_check = form.email.value;
+              if (form.email.value.indexOf(" ") != -1) {
+                  alert("Kindly Enter correct E-Mail ID without any spaces in it.");
+                  form.email.focus();
+                  return false;
+              }
 
-            if (form.email.value.length != 0) {
-                var e_check = form.email.value;
-                if (form.email.value.indexOf(" ") != -1) {
-                    alert("Kindly Enter correct E-Mail ID without any spaces in it.");
-                    form.email.focus();
-                    return false;
-                }
+              if (form.email.value.indexOf("@") == -1) {
+                  alert("Invalid E-Mail ID! Kindly enter correct E-Mail ID.");
+                  form.email.focus();
+                  return false;
+              }
+              validarr = form.email.value.split("@");
+              if (validarr[0].length == 0) {
+                  alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
+                  form.email.focus();
+                  return false;
+              }
+              if (validarr[1].indexOf("@") >= 0) {
+                  alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
+                  form.email.focus();
+                  return false;
+              }
+              if (validarr[1].length == 0) {
+                  alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
+                  form.email.focus();
+                  return false;
+              }
+              if (validarr[1].length != 0) {
+                  if (validarr[1].indexOf(".") == -1) {
+                      alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
+                      form.email.focus();
+                      return false;
+                  }
+                  validemail = validarr[1].split(".");
+                  if (validemail[0].length == 0) {
+                      alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
+                      form.email.focus();
+                      return false;
+                  }
+                  if (validemail[1].length == 0) {
+                      alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
+                      form.email.focus();
+                      return false;
+                  }
+              }
+          }
 
-                if (form.email.value.indexOf("@") == -1) {
-                    alert("Invalid E-Mail ID! Kindly enter correct E-Mail ID.");
-                    form.email.focus();
-                    return false;
-                }
-                validarr = form.email.value.split("@");
-                if (validarr[0].length == 0) {
-                    alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
-                    form.email.focus();
-                    return false;
-                }
-                if (validarr[1].indexOf("@") >= 0) {
-                    alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
-                    form.email.focus();
-                    return false;
-                }
-                if (validarr[1].length == 0) {
-                    alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
-                    form.email.focus();
-                    return false;
-                }
-                if (validarr[1].length != 0) {
-                    if (validarr[1].indexOf(".") == -1) {
-                        alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
-                        form.email.focus();
-                        return false;
-                    }
-                    validemail = validarr[1].split(".");
-                    if (validemail[0].length == 0) {
-                        alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
-                        form.email.focus();
-                        return false;
-                    }
-                    if (validemail[1].length == 0) {
-                        alert("Invalid E-Mail ID! Kindly enter the correct E-mail ID.");
-                        form.email.focus();
-                        return false;
-                    }
-                }
-            }
+          if (form.subject.value == "") {
+              alert("Please Enter subject.");
+              form.subject.focus();
+              return false;
+          }
 
-            if (form.subject.value == "") {
-                alert("Please Enter subject.");
-                form.subject.focus();
-                return false;
-            }
+          if (form.message.value == "") {
+              alert("Please enter a message");
+              form.message.focus();
+              return false;
+          }
+          return true;
+      }
 
-            if (form.message.value == "") {
-                alert("Please enter a message");
-                form.message.focus();
-                return false;
-            }
-            return true;
-        }
+      function only_digits1(e) {
 
-        function only_digits1(e) {
-
-            if (window.event) {
-                if (e.keyCode >= '0'.charCodeAt(0) && e.keyCode <= '9'.charCodeAt(0)) return true;
-                return false
-            }
-            else if (e.which) {
-                if (e.which >= '0'.charCodeAt(0) && e.which <= '9'.charCodeAt(0) || e.which == 8 || e.which == 13) return true;
-                return false
-            }
-        }
+          if (window.event) {
+              if (e.keyCode >= '0'.charCodeAt(0) && e.keyCode <= '9'.charCodeAt(0)) return true;
+              return false
+          }
+          else if (e.which) {
+              if (e.which >= '0'.charCodeAt(0) && e.which <= '9'.charCodeAt(0) || e.which == 8 || e.which == 13) return true;
+              return false
+          }
+      }
 </script>
+  
     <!--The div element for the map -->
   <div class="centerDiv">
 
@@ -127,7 +127,7 @@
                         <h2 class="contact-title">Get in Touch</h2>
                     </div>--%>
                     <div class="col-lg-8">
-                   <form name="form" class="form-contact contact_form" action="#" method="post" id="form"  onSubmit="return checkForm(form)">
+                      <form name="form" class="form-contact contact_form" action="#" method="post" id="form"  onSubmit="return checkForm(form)">
 
                             <%--<form class="form-contact contact_form" action="#" method="post" id="contactForm" novalidate="novalidate">--%>
                             <div class="row">
