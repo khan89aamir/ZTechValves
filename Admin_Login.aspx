@@ -29,10 +29,7 @@
                 alert("Please enter E-Mail Address.");
                 return false;
             }
-          
         }
-
-
 </script>
 
      <div class="login-page">
@@ -42,8 +39,6 @@
   
     <form name="myForm"  class="Loginform"  action="/Admin_Manager.aspx" onsubmit="return validateForm()" method="post">
   
-        
-     
       <input id="txtUserID" type="text" name="userid" placeholder="Enter User Name"/>
       <input id="txtPassword" type="password" name="password" placeholder="Enter Password"/>
        
@@ -53,7 +48,6 @@
 
           <button  type="button" onclick="location.href = 'SignUp.aspx';"  class="btnOpt">Register</button>
     </form>
-
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -69,12 +63,8 @@
          <form name="forgotPass"   action="/action_page.php" onsubmit="return validateForm2()" method="post">
   
       <input id="txtEmailID" type="text" name="emailID" placeholder="Enter Email Address"/>
-   
-       
       <button name="btnSubmit" onclick="return validateForm2()"> Submit</button><br /><br />
-   
     </form>
-
 
     </div>
     <div class="modal-footer">
@@ -112,10 +102,7 @@
     }
 </script>
   </div>
-        
-        
-       
-</div>
-        
-</asp:Content>
 
+</div>
+
+</asp:Content>
