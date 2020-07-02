@@ -1,35 +1,16 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Test_Default" %>
+
 <!DOCTYPE html>
-<html>
-<head>
-<title>Maintenance</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" >
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/uxcore.css" rel="stylesheet">
-<link href="css/customer-comp.css" rel="stylesheet">
 
-<script type='text/javascript'>
-var fqdn = "xxxxxXXXXXfqdnXXXXXxxxxx";
-redirectToLogin = function() {
-	window.location.href = "https://" + fqdn + ":8443";
-}
-</script>	
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
 </head>
-
 <body>
-<div id="error-img"><img src="images/404_background.jpg"></div>
-<div class="container text-center" id="error">
-  
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="main-icon text-success"><span class="uxicon uxicon-clock-refresh"></span></div>
-      <h1>Future home of something quite cool.</h1>
-      <p class="lead">If you're the <strong>site owner</strong>, <a href="#" onclick='redirectToLogin();'>log in</a> to launch this site</p>
-      <p class="lead">If you are a <strong>visitor</strong>, check back soon.</p>
-    </div>
-  </div>
-
-</div>
-
+    <form id="form1" runat="server">
+        <div>
+            <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        </div>
+    </form>
 </body>
 </html>

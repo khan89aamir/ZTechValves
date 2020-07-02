@@ -312,7 +312,7 @@ ul.Mylst li {
                 </div>
             </div>
             <div id="sticky-header" class="main-header-area">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-2">
                             <div class="logo">
@@ -321,8 +321,9 @@ ul.Mylst li {
                                 </a>
                             </div>
                         </div>
+                       
                         <div class="col-xl-6 col-lg-7">
-                          
+                         
                             <div class="main-menu  d-none d-lg-block">
                              
                                 <nav>
@@ -344,17 +345,38 @@ ul.Mylst li {
                                          <li><a href="Admin_Login.aspx"><span class="MainMenuItem">ADMIN </span></a></li>
                                         <li><a href="/AboutUS.aspx"><span class="MainMenuItem"> ABOUT US </span></a></li>
                                         <li><a href="Contactus.aspx"><span class="MainMenuItem"> CONTACT US </span></a></li>
+                                    
+
                                     </ul>
-                                </nav>
+                                  </nav>
+                              
                             </div>
+                              
                         </div>
-                      
-                        <div class="col-12">
+                       
+                        <div id="pnlProfile" class="col ml-auto text-right mr-5" runat="server" visible="false">
+                          <div class="dropdown">
+              <button class="btn dropdown-toggle" style="background-color:#06456f; color:white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login By : Admin
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="Admin_Login.aspx">Logout</a>
+    
+              </div>
+                </div>
+                             
+                        </div>
+                        <div class="col-12 ">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
+                
+                
                 </div>
-            </div>
+           
+                </div>
+  
         </div>
     </header>
     <!-- header-end -->
