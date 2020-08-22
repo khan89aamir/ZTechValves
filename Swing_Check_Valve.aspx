@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Swing_Check_Valve.aspx.cs" Inherits="Swing_Check_Valve" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="Swing_Check_Valve.aspx.cs" Inherits="Swing_Check_Valve" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
-</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
 
         <center><h1 style="font-family:'Times New Roman, Times, serif;'">SWING CHECK VALVES </h1></center>

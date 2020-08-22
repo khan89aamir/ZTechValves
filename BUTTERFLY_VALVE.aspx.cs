@@ -5,17 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class MasterPage : System.Web.UI.MasterPage
+public partial class BUTTERFLY_VALVE : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
-    }
-  
-    protected void lnkLogout_Click(object sender, EventArgs e)
-    {
-
-        Session.Abandon();
 
     }
 }

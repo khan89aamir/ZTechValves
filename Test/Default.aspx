@@ -1,16 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Test_Default" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="Test_Default" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+</asp:Content>
+

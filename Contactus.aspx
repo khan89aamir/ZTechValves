@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Contactus.aspx.cs" Inherits="Contactus" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="Contactus.aspx.cs" Inherits="Contactus" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
-</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
    
   <script language="javascript">
@@ -119,7 +118,7 @@
     <!--The div element for the map -->
   <div class="centerDiv">
 
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d545.8711936861341!2d72.63406011940768!3d23.017564794760062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e86872fffffff%3A0x8d3654809a84a969!2sOmex%20Elevator!5e0!3m2!1sen!2sin!4v1584785501876!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7344.345555985453!2d72.6308847!3d23.0174275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e879b560865c1%3A0x61456816dae9c1d!2sZTECH%20Valves!5e0!3m2!1sen!2sin!4v1597944849972!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
     <br />
     <div class="centerDiv">

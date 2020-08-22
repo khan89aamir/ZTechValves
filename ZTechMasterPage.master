@@ -1,0 +1,295 @@
+﻿<%@ Master Language="C#" CodeFile="ZTechMasterPage.master.cs" Inherits="ZTechMasterPage"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>ZTech</title>
+
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- CSS here -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link href="css/MasterPageCss.css" rel="stylesheet" />
+   
+
+    <script src="js/boostrap/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/boostrap/popper.min.js"></script>
+    <script src="js/boostrap/bootstrap.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-menu a, #btnAdminPage, #btnAboutUS, #btnHome, #btnContactUs, #btnSave, #btnMyProfile, #btnLogout, #btnUpdateProduct, #btnUpdateImage, #btnSaveImage, #btnDeleteImage ').click(function (e) {
+
+                if (e.currentTarget.id == "btnSave") {
+
+                    $("#spanmsg").text("Updating Data Please Wait....");
+                }
+                else if (e.currentTarget.id == "btnSaveImage") {
+
+                    $("#spanmsg").text("Saving Image Please Wait....");
+                }
+                else if (e.currentTarget.id == "btnDeleteImage") {
+
+                    $("#spanmsg").text("Deleting Image Please Wait....");
+                }
+                else {
+                    $("#spanmsg").text("Loading Please Wait.....");
+                }
+
+
+                $('#loadingBox').modal();
+
+            });
+
+        });
+
+
+
+    </script>
+
+
+    <%--DO NOT remove this Modal code from top of the page, else it wont Work--%>
+    <!-- Modal -->
+    <div class="modal fade  " id="loadingBox" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                
+                <div class="modal-body mt-2">
+                    
+                    <div class="text-center text-dark"">
+                        <div class="spinner-border "style="width: 3rem; height: 3rem;" role="status">
+                            <span class="sr-only">Loading...</span>
+                          
+                        </div>  
+                     
+                    </div>
+                     <div class="text-center text-dark m-2">
+                           <span id="spanmsg" style="font-family:'Times New Roman'; font-size:large"></span>
+                         </div>
+
+                </div>
+                <hr class="bg-danger"/>
+                <div class="mb-2" style="text-align:center!important; font-family:'Times New Roman'">
+                    <span> ZTECH VALVES</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+ 
+    <div class="container-fluid Header">
+
+        <div class="container">
+            <div class="row ">
+
+                <div class="col-12  short_contact_list">
+
+                    <ul class="nav justify-content-center ">
+
+                        <li class="mr-5"><a href="mailto:contact@ztechvalves.in"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Contact@ztechvalves.in</a></li>
+                        <li class="mr-5"><a href="mailto:Ztechvalves@gmail.com"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Ztechvalves@gmail.com</a></li>
+                        <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Gulam Rasool : +91 9137738202</a></li>
+                        <li class="mr-5"><a href="www.google.com"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Shakeel Ahmad : +91 9967716771</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2">
+
+        <img src="img/logo.png" width="100" height="100" />
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+            <ul class="navbar-nav mx-auto text-md-center text-left MyMenu">
+                <li class="nav-item">
+                    <a id="btnHome" class="nav-link mr-4" href="Home.aspx">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-4" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                    <div class="dropdown-menu">
+                        <a id="btnGate" class="dropdown-item mt-1" style="font-size: small" href="Gate_Valve.aspx">GATE VALVE</a>
+                        <a id="btnGlob" class="dropdown-item mt-1" style="font-size: small" href="Globe_Valve.aspx">GLOBE VALVE</a>
+                        <a  id="btnSwing" class="dropdown-item mt-1" style="font-size: small" href="Swing_Check_Valve.aspx">SWING CHECK VALVE</a>
+
+                        <a id="btnBall" class="dropdown-item mt-1" style="font-size: small" href="BALL_VALVE.aspx">BALL VALVE  </a>
+                        <a  id="Forged" class="dropdown-item mt-1" style="font-size: small" href="FORGED_VALVE.aspx">FORGED VALVE</a>
+                        <a  id="BUTTERFLY" class="dropdown-item mt-1" style="font-size: small" href="BUTTERFLY_VALVE.aspx">BUTTERFLY VALVE</a>
+
+
+                    </div>
+                </li>
+                <li class="nav-item mr-4">
+                    <a id="btnAdminPage" class="nav-link" href="Admin_Login.aspx">ADMIN</a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a id="btnAboutUS" class="nav-link " href="AboutUS.aspx">ABOUT US</a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a id="btnContactUs" class="nav-link " href="Contactus.aspx">CONTACT US</a>
+                </li>
+            </ul>
+            <div id="pnlProfile" class="dropdown" visible="false" runat="server">
+                <button class="btn btn-primary dropdown-toggle" style="background-color: #06456f; color: white; font-family: 'Times New Roman'" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login By : Admin
+                </button>
+                <div class="dropdown-menu" style="font-family: 'Times New Roman'" aria-labelledby="dropdownMenuButton">
+                    <a id="btnMyProfile" class="dropdown-item" href="MyProfile.aspx?1">My Profile</a>
+                    <a id="btnLogout" class="dropdown-item" href="RequestHandler.aspx?action=logout">Logout</a>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small mdb-color pt-4 bg-dark Zfooter">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Footer links -->
+            <div class="row text-center text-md-left mt-3 pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">ZTECH VALVES</h6>
+                    <p>
+                        We would like introduce our self, we are one of the established Industrial valves manufacturing company in Ahmedabad, INDIA with all latest manufacturing facility.
+                        <br />
+                        We are ISO 9001 : 2015 certified company have active quality management system to provide good quality products. Please forward us the requirements of valves so that we can provide you the best prices..
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                    <p>
+                        <a href="#!">GATE VALVE</a>
+                    </p>
+                    <p>
+                        <a href="#!">GLOBE VALVE</a>
+                    </p>
+                    <p>
+                        <a href="#!">SWING CHECK VALVE</a>
+                    </p>
+                    <p>
+                        <a href="#!">BALL VALVE</a>
+                    </p>
+                    <p>
+                        <a href="#!">FORGED VALVE</a>
+                    </p>
+                    <p>
+                        <a href="#!">BUTTERFLY VALVE</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                    <p>
+                        <a href="#!">Admin Manager</a>
+                    </p>
+                    <p>
+                        <a href="#!">About Us</a>
+                    </p>
+                    <p>
+                        <a href="#!">Contact Us</a>
+                    </p>
+
+                </div>
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p>
+                        <i class="fa fa-home mr-3"></i>SHED NO 17/1, GAUTAM SHAH INDUSTRIAL ESTATE, B/H MANIYAR TRAILER, NR SUNSHINE ESTATE, RAKHIAL, AHMEDABAD, GUJARAT, 380023
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i>Contact@ztechvalves.in
+                    </p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i>+91 9137738202
+                    </p>
+                    <p>
+                        <i class="fa fa-print mr-3"></i>+91 9967716771
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Footer links -->
+
+            <hr>
+
+            <!-- Grid row -->
+            <div class="row d-flex align-items-center">
+
+                <!-- Grid column -->
+                <div class="col-12">
+
+                    <!--Copyright-->
+                    <p class="text-center text-lg-center">
+                        © 2020 Copyright:
+          <a href="#">
+              <strong>ZTECH VALVES</strong>
+          </a>
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+    <!-- Footer -->
+
+
+
+</body>
+</html>

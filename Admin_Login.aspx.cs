@@ -8,12 +8,31 @@ using System.Data;
 
 public partial class Admin_Login : System.Web.UI.Page
 {
-    clsCoreApp ObjCon = new clsCoreApp();
+   clsMySQLCoreApp ObjCon = new clsMySQLCoreApp();
     protected void Page_Load(object sender, EventArgs e)
     {
-      
+        
+        if (Session["User"] != null)
+        {
+            string logoutValue = Request.QueryString["logout"];
+            if (logoutValue=="1")
+            {
+                LogOut();
+            }
+            else
+            {
+                Response.Redirect("Admin_Manager.aspx");
+            }
+           
+        }
     }
+    public void LogOut()
+    {
+       
+        Session["User"] = null;
+        Session.Abandon();
 
+    }
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         string userName = val_UserName.Value;

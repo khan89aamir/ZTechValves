@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Globe_Valve.aspx.cs" Inherits="Globe_Valve" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="Globe_Valve.aspx.cs" Inherits="Globe_Valve" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
     <center><h1 style="font-family:'Times New Roman, Times, serif;'">GLOBE VALVES </h1></center>
     <div class="card center">
@@ -80,34 +79,34 @@ CF8 M</pre>
             </table>
         </div>
     </div>
-   <br />
+    <br />
 
     <div class="card center">
         <font size="5" color="#05376d">CONSTRUCTION FEATURES:</font>
         <ul class="Mylst">
-        <li>Valves Code BS 1873</li>
-        <li>End to End Dimension ANSI B 16.10 / 2080</li>
-        <li>End Flanged Flat / Raised Face, Drilled to ANSI B 16.5 / BS 1560</li>
-        <li>Bonnet Bolted</li>
-        <li>Stem Rising</li>
-        <li>Disc Loose Plug</li>
-        <li>Seat Seal Welded / Renewable - Screwed</li>
-        <li>Stem Packing Renewable with Valve open on stream</li>
-        <li>Testing Code MSS SP 61 / API 598 / BS 6755</li>
-        <li>Handwheel rising</li>
-        <li>Others Outside screw and yoke</li>
-    </ul>
+            <li>Valves Code BS 1873</li>
+            <li>End to End Dimension ANSI B 16.10 / 2080</li>
+            <li>End Flanged Flat / Raised Face, Drilled to ANSI B 16.5 / BS 1560</li>
+            <li>Bonnet Bolted</li>
+            <li>Stem Rising</li>
+            <li>Disc Loose Plug</li>
+            <li>Seat Seal Welded / Renewable - Screwed</li>
+            <li>Stem Packing Renewable with Valve open on stream</li>
+            <li>Testing Code MSS SP 61 / API 598 / BS 6755</li>
+            <li>Handwheel rising</li>
+            <li>Others Outside screw and yoke</li>
+        </ul>
     </div>
     <br />
 
     <div class="card center">
         <font size="5" color="#05376d">SIZE :</font>
         <ul class="Mylst">
-        <li>ANSI 150 # 50 mm TO 500 mm</li>
-        <li>ANSI 300 # 50 mm TO 400 mm</li>
-        <li>ANSI 600 # 50 mm TO 300 mm</li>
-    </ul>
+            <li>ANSI 150 # 50 mm TO 500 mm</li>
+            <li>ANSI 300 # 50 mm TO 400 mm</li>
+            <li>ANSI 600 # 50 mm TO 300 mm</li>
+        </ul>
     </div>
-    <br/>
+    <br />
 
 </asp:Content>
