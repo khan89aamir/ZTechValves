@@ -5,10 +5,10 @@
 <html>
 <head runat="server">
     <title>ZTech</title>
-
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    
     <!-- CSS here -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
