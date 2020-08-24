@@ -2,6 +2,24 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+
+    <style>
+        @media screen and (max-width: 400px) and (min-width: 200px) {
+            .display-5 {
+                font-size:xx-large !important;
+                font-weight: bold !important;
+            }
+        }
+        /* For device width smaller than 768px: */
+        @media only screen and (max-width: 768px) {
+            .card {
+                width:100%!important;
+            }
+        }
+    </style>
+
+
+
     <div class="jumbotron jumbotron-fluid" style="background-color: #06456f; color: white">
         <div class="container">
             <h1 class="display-5">About ZTech Valves</h1>
@@ -19,7 +37,7 @@
             <div class="col-md-6 t d-flex justify-content-center">
                 <div class="card w-50">
                     <div class=" card-header">
-                        Shakeel Ahmad 
+                      <h4>Shakeel Ahmad </h4>  
                     </div>
                     <img class="card-img-top" src="img/user.JPG" alt="Card image cap">
                     <div class="card-body">
@@ -33,7 +51,7 @@
             <div class="col-md-6  d-flex justify-content-center ">
                 <div class="card w-50">
                     <div class=" card-header">
-                        Gulam Rasool 
+                       <h4> Gulam Rasool  </h4>   
                     </div>
                     <img class="card-img-top" src="img/user.JPG" alt="Card image cap">
                     <div class="card-body">
@@ -50,11 +68,11 @@
     </div>
     <hr />
 
-    <div class="container" style="background-color: #06456f; color: white; font-family: 'Times New Roman'; font-size: larger">
+    <div class="container" style="background-color: #06456f; color: white; font-family: 'Times New Roman'; font-size: x-large">
         What we do ?
 
     </div>
-    <div class="container" style="font-family: 'Times New Roman'; font-size: large">
+    <div class="container alert-info" style="font-family: 'Times New Roman'; font-size: large">
         We are the manufacturer of<br />
         1. GATE VALVE.<br />
         2. GLOBE VALVE.
@@ -73,17 +91,21 @@
 
     </div>
     <hr />
-   <div class="container">
-       <p class="lead">
-           Materials of Construction such as CARBON STEEL, STAINLESS STEEL, LOW-TEMPERATURE CARBON STEEL, TITANIUM ALLOYS, MONEL ALLOYS and DUPLEX STAINLESS STEEL.
+    <div class="container ">
+        <p class="lead">
+            Materials of Construction such as CARBON STEEL, STAINLESS STEEL, LOW-TEMPERATURE CARBON STEEL, TITANIUM ALLOYS, MONEL ALLOYS and DUPLEX STAINLESS STEEL.
 
-<Br /><br />Our aim of manufacturing is high-quality products, timely delivery capabilities, and competitive prices.
+            <br />
+            <br />
+            Our aim of manufacturing is high-quality products, timely delivery capabilities, and competitive prices.
 
-<br /><br />We are supplying in OIL & GAS, POWER PLANT, CHEMICAL & FERTILIZERS, MARINE & OFF-SHORE, PETROCHEMICALS, SUGAR AND PAPER INDUSTRIES.
+            <br />
+            <br />
+            We are supplying in OIL & GAS, POWER PLANT, CHEMICAL & FERTILIZERS, MARINE & OFF-SHORE, PETROCHEMICALS, SUGAR AND PAPER INDUSTRIES.
 
-       </p>
+        </p>
 
-   </div>
+    </div>
 
 </asp:Content>
 

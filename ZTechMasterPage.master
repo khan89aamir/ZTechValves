@@ -296,16 +296,24 @@
         function myFunction() {
             if (window.pageYOffset > sticky) {
 
-                header.classList.add("sticky");
-                header.classList.add("MyHeader2");
 
+                if (screen.width>1000) {
+                    header.classList.add("sticky");
+                    header.classList.add("MyHeader2");
+
+                }
+                
+               
                 document.getElementById("myBtn").style.display = "block";
 
 
             } else {
 
-                header.classList.remove("sticky");
-                header.classList.remove("MyHeader2");
+                if (screen.width > 1000) {
+                    header.classList.remove("sticky");
+                    header.classList.remove("MyHeader2");
+                }
+               
 
                 document.getElementById("myBtn").style.display = "none";
             }
