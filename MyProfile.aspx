@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="MyProfile.aspx.cs" Inherits="MyProfile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="MyProfile.aspx.cs" Inherits="MyProfile" ClientIDMode="static" %>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
@@ -19,8 +19,10 @@
             <form class="needs-validation mt-2 ml-2" action="RequestHandler.aspx?action=changeEmail" method="post" novalidate>
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
+                        
                         <label for="validationCustom01">Email Address :</label>
-                        <input type="email" class="form-control" name="txtemail" id="txtemail" placeholder="Enter mail address" required>
+                       
+                        <input runat="server" type="email" class="form-control" id="txtemail" name="txtemail"  placeholder="Enter mail address"  required>
                         <div class="invalid-feedback">
                             Enter valid E-mail address
                         </div>
@@ -65,15 +67,7 @@
 
     <script>
 
-        function validateForm() {
-            var x1 = document.forms["myForm"]["txtOldPassword"].value;
-            var x2 = document.forms["myForm"]["txtNewPassword"].value;
-            if (x1 != x2) {
-
-                document.getElementById("pass").innerHTML = "Old password and New password doesn't match.";
-                return false;
-            }
-        }
+      
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
@@ -87,6 +81,19 @@
                         if (form.checkValidity() === false) {
                             event.preventDefault();
                             event.stopPropagation();
+                        }
+                        else {
+
+                            if (form.name=="myForm") {
+                                $("#spanmsg").text("Updating Password, Please wait...");
+                            }
+                            else {
+                                $("#spanmsg").text("Updating Email, Please wait...");
+                            }
+                            // if validtion is OK then only show the loading message
+                           
+                            $('#loadingBox').modal();
+
                         }
                         form.classList.add('was-validated');
                     }, false);

@@ -1,27 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 public partial class RequestHandler : System.Web.UI.Page
 {
+    
     protected void Page_Load(object sender, EventArgs e)
-    {// This is the Request hadnler page, it handles ther quest and do the given task
+    {
+        //This is the Request hadnler page, it handles ther quest and do the given task
         //and navigate back to the page.
 
         if (!IsPostBack)
         {
             string action = Request.QueryString["Action"];
-          
 
 
             if (action == "deleteimg")
             {
+
                 string ID = Request["ImageID"].ToString();
-                string ImageName= Request["ImageName"].ToString();
+                string ImageName = Request["ImageName"].ToString();
                 DeleteImage(ID, ImageName);
 
             }
@@ -29,19 +33,26 @@ public partial class RequestHandler : System.Web.UI.Page
             {
 
                 string newpass = Request.Form["txtNewPassword"].ToString();
-                ChnagePass(newpass);
+                string oldPass = Request.Form["txtOldPassword"].ToString();
+                ChnagePass(newpass,oldPass);
             }
             else if (action == "changeEmail")
             {
 
-                string newmail = Request.Form["txtemail"].ToString();
+                string newmail = Request.Form["ctl00$MainContent$txtemail"].ToString();
                 ChagngeEmail(newmail);
             }
             else if (action == "logout")
             {
                 Session["User"] = null;
                 Session.Abandon();
-                Response.Redirect("Admin_Login.aspx");
+               
+                // replace the way that user should not go back.
+               string script= "window.location.replace('Admin_Login.aspx')";
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "func2", script, true);
+
+
+
             }
             else
             {
@@ -50,9 +61,8 @@ public partial class RequestHandler : System.Web.UI.Page
             }
 
         }
-
-
     }
+
     private void DeleteImage(string imgID, string ImageName)
     {
         clsMySQLCoreApp ObjDAL = new clsMySQLCoreApp();
@@ -60,25 +70,59 @@ public partial class RequestHandler : System.Web.UI.Page
 
         if (File.Exists(Server.MapPath("~/Uploads/" + ImageName)))
         {
-            File.Delete(Server.MapPath("~/Uploads/"+ImageName));
+            File.Delete(Server.MapPath("~/Uploads/" + ImageName));
         }
-        Response.Redirect("UpdateProductImage.aspx");
+
+        NavigationURL.Value = "UpdateProductImage.aspx";
+
+        ShowMessageBox("Image has been deleted successfully.");
+        
 
 
     }
-    private void ShowMessageBox(string msg)
+    private void ShowMessageBox(string msg,bool IsSuccess=true)
     {
-
-        lblMessage.InnerText = msg;
-        Page.ClientScript.RegisterStartupScript(this.GetType(), "func", "$('#myModal').modal();", true);
+        HtmlGenericControl lblUserVal = (HtmlGenericControl)Page.Master.FindControl("lblMessage");
+        lblUserVal.InnerText = msg;
+        string script = "";
+        if (IsSuccess)
+        {
+             script = "$('#mdlNormalMessage').modal(); ";
+                              
+        }
+        else
+        {
+             script = "$('#mdlNormalMessage').modal(); " +
+                      "$('#iconMsg').removeClass('fa-check-circle').addClass('fa-times-circle');" +
+                      "$('#iconMsg').css('color','red');";
+        }
+       
+        Page.ClientScript.RegisterStartupScript(this.GetType(), "func", script, true);
     }
-    private void ChnagePass(string pass)
+  
+    private void ChnagePass(string Newpass, string oldPass)
     {
         clsMySQLCoreApp ObjDAL = new clsMySQLCoreApp();
-        ObjDAL.ExecuteNonQuery("update ztech.tblUserDetails set Password='"+pass+"'");
-
-        ShowMessageBox("Password has been update.");
-        Session["Page"] = "MyProfile.aspx";
+        
+        DataTable dataTable = ObjDAL.ExecuteSelectStatement("SELECT * FROM ztech.tblUserDetails;");
+        if (dataTable.Rows.Count > 0)
+        {
+            string strOldPass = dataTable.Rows[0]["Password"].ToString();
+            if (oldPass== strOldPass)
+            {
+                ObjDAL.ExecuteNonQuery("update ztech.tblUserDetails set Password='" + Newpass + "'");
+                NavigationURL.Value = "MyProfile.aspx";
+                ShowMessageBox("Password has been update successfully.");
+               
+            }
+            else
+            {
+                NavigationURL.Value = "MyProfile.aspx";
+                ShowMessageBox("Old password doesn't match with existing old password.",false);
+            }
+        
+        
+        }
 
     }
     private void ChagngeEmail(string mail)
@@ -86,8 +130,9 @@ public partial class RequestHandler : System.Web.UI.Page
         clsMySQLCoreApp ObjDAL = new clsMySQLCoreApp();
         ObjDAL.ExecuteNonQuery("update ztech.tblUserDetails set EmailID='" + mail + "'");
 
-        ShowMessageBox("Email has been update.");
-        Session["Page"] = "MyProfile.aspx";
+        ShowMessageBox("Email has been update successfully.");
+        NavigationURL.Value = "MyProfile.aspx";
+
 
 
 
@@ -95,16 +140,7 @@ public partial class RequestHandler : System.Web.UI.Page
   
    
 
-    protected void DoPageNavigation_ServerClick(object sender, EventArgs e)
-    {
-        if ( Session["Page"]!=null)
-        {
-            Response.Redirect(Session["Page"].ToString());
-        }
-        else
-        {
-            Response.Redirect("Home.aspx");
-        }
-      
-    }
+   
+
+  
 }

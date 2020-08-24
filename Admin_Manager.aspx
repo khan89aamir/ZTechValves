@@ -89,6 +89,11 @@
                             event.preventDefault();
                             event.stopPropagation();
                         }
+                        else {
+                            // if validtion is OK then only show the loading message
+                            $("#spanmsg").text("Loading Please Wait.....");
+                            $('#loadingBox').modal();
+                        }
                         form.classList.add('was-validated');
                     }, false);
                 });
@@ -116,7 +121,7 @@
                 $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
             });
 
-
+           
 
         });
 

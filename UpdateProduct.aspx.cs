@@ -28,6 +28,8 @@ public partial class UpdateProduct : System.Web.UI.Page
 
         if (!Page.IsPostBack)
         {
+            Control control = Page.Master.FindControl("pnlProfile");
+            control.Visible = true;
             LoadProductDetails();
         }
                   

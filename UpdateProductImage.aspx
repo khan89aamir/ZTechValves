@@ -83,7 +83,7 @@
 
                     <span class="btn btn-outline-primary ParentSpan">
                         <i class="fa fa-floppy-o"></i>
-                        <asp:Button ID="btnSaveImage" CssClass="MySubmitbtn" runat="server" Text="Save" OnClick="btnSave_Click" />
+                        <asp:Button ID="btnSaveImage" CssClass="MySubmitbtn" runat="server" Text="Save Image" OnClick="btnSave_Click" />
                     </span>
 
                 </div>
@@ -103,11 +103,15 @@
                             </div>
                             <div class="card-footer">
                                 <%-- we can not have multiple forms thats why created html form  --%>
-                                <form action="RequestHandler.aspx?action=deleteimg" method="post" onsubmit="return confirm('Are you sure you want to submit?');">
-                                    <input name="ImageID" type="text" value="<%# Eval("ImageID")%>" id="ImageID" hidden />
+                                <form id='<%# "frm"+Eval("ImageID")%>' method="post" action="RequestHandler.aspx?action=deleteimg" >
+                                    
+                                    <input name="ImageID" style="display:none" type="text" value="<%# Eval("ImageID")%>" id="ImageID" />
                                     <input name="ImageName" type="text" value="<%# Eval("ImageName")%>" id="ImageName" hidden />
-                                    <input class="btn-sm btn-primary" type="submit" name="btnDeleteImage" value="Delete" id="btnDeleteImage" />
+                                    
                                 </form>
+                                <%-- Keeping the below button out of the form, because needs to show the confirm box. ( else it will get submited) --%>
+                                <input class="btn-sm btn-primary" type="submit"  name="btnDeleteImage" value="Delete" id='<%# Eval("ImageID")%>' />
+                              
 
 
                             </div>
@@ -118,8 +122,13 @@
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
+            <label id="lblSelectedFormID" style="display:none">Selected Form ID</label>
+           
         </div>
+        
     </div>
+  
+    
     <script>
         var inputElement = document.getElementById("ctrUploadFile");
         inputElement.onchange = function (event) {
@@ -173,6 +182,11 @@
                             event.preventDefault();
                             event.stopPropagation();
                         }
+                        else {
+                            // if validtion is OK then only show the loading message
+                            $("#spanmsg").text("Updating Image Please Wait.....");
+                            $('#loadingBox').modal();
+                        }
                         form.classList.add('was-validated');
                     }, false);
                 });
@@ -198,7 +212,35 @@
                 $(".custom-file-label").addClass("selected").html("");
             });
 
+            $("#btnPicDelete").click(function () {
 
+            $(".custom-file-label").addClass("selected").html("");
+            });
+
+            //// there could be multiple delete button so accessing it with attribute.
+            $("[name='btnDeleteImage']").click(function (e) {
+                
+                $("#spanConfirmMsg").text("Are you sure, you want to delete the image ?");
+
+                // save the selected ID so that we can use it when submiting the form
+                $('#lblSelectedFormID').text(e.currentTarget.id);
+
+              
+                $('#confirmationModel').modal();
+
+            });
+            //// this button is on confrimation model which is there in Master page.
+            $("#btnConfirm").click(function () {
+
+                // get the form name in single quote
+                var formToSubmit = 'frm' + $('#lblSelectedFormID').text();
+
+             
+
+              // submit the form and delte the image
+                $('#'+formToSubmit).submit();
+
+            });
 
         });
 

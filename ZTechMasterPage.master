@@ -1,14 +1,15 @@
-﻿<%@ Master Language="C#" CodeFile="ZTechMasterPage.master.cs" Inherits="ZTechMasterPage"  %>
+﻿<%@ Master Language="C#" CodeFile="ZTechMasterPage.master.cs" Inherits="ZTechMasterPage" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
+
     <title>ZTech</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    
+
     <!-- CSS here -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,31 +18,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
     <link href="css/MasterPageCss.css" rel="stylesheet" />
-   
+
 
     <script src="js/boostrap/jquery-3.2.1.slim.min.js"></script>
     <script src="js/boostrap/popper.min.js"></script>
     <script src="js/boostrap/bootstrap.min.js"></script>
+
+
+
 </head>
 <body>
     <script>
+
         $(document).ready(function () {
-            $('.dropdown-menu a, #btnAdminPage, #btnAboutUS, #btnHome, #btnContactUs, #btnSave, #btnMyProfile, #btnLogout, #btnUpdateProduct, #btnUpdateImage, #btnSaveImage, #btnDeleteImage ').click(function (e) {
+            $('.dropdown-menu a, #btnAdminPage, #btnAboutUS, #btnHome, #btnContactUs, #btnMyProfile, #btnLogout,  #btnDeleteImage ').click(function (e) {
 
-                if (e.currentTarget.id == "btnSave") {
-
-                    $("#spanmsg").text("Updating Data Please Wait....");
-                }
-                else if (e.currentTarget.id == "btnSaveImage") {
-
-                    $("#spanmsg").text("Saving Image Please Wait....");
-                }
-                else if (e.currentTarget.id == "btnDeleteImage") {
+                if (e.currentTarget.id == "btnDeleteImage") {
 
                     $("#spanmsg").text("Deleting Image Please Wait....");
                 }
@@ -54,128 +51,272 @@
 
             });
 
+            $(".page-footer a").click(function () {
+
+                $("#spanmsg").text("Loading Please Wait....");
+                $('#loadingBox').modal();
+            });
+          
+
+
         });
 
+      
+        function RedicrectToURL() {
 
 
+            document.getElementById("pngNormalLoading").style.display = "block";
+            document.getElementById("btnNormalMsgClose").disabled = true;
+
+
+            var urlto = document.getElementById("NavigationURL").value;
+
+
+            // Simulate an HTTP redirect:
+            window.location.replace(urlto);
+        }
+        function ShowLoading() {
+
+            document.getElementById("btnConfirm").disabled = true;
+
+            document.getElementById("pngLoading").style.display = "block";
+        }
     </script>
 
 
+
     <%--DO NOT remove this Modal code from top of the page, else it wont Work--%>
-    <!-- Modal -->
-    <div class="modal fade  " id="loadingBox" role="dialog" data-backdrop="static">
+    <!-- Modal Loading-->
+    <div class="modal fade " id="loadingBox" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-dialog-centered">
 
             <!-- Modal content-->
             <div class="modal-content">
 
-                
-                <div class="modal-body mt-2">
-                    
-                    <div class="text-center text-dark"">
-                        <div class="spinner-border "style="width: 3rem; height: 3rem;" role="status">
-                            <span class="sr-only">Loading...</span>
-                          
-                        </div>  
-                     
-                    </div>
-                     <div class="text-center text-dark m-2">
-                           <span id="spanmsg" style="font-family:'Times New Roman'; font-size:large"></span>
-                         </div>
+                <div class="modal-header">
+                    <span>
+                        <img src="img/favicon-32x32.png" /></span>
+                    <h5 class="modal-title" style="font-family: 'Times New Roman';">ZTech Valves</h5>
 
                 </div>
-                <hr class="bg-danger"/>
-                <div class="mb-2" style="text-align:center!important; font-family:'Times New Roman'">
-                    <span> ZTECH VALVES</span>
+                <div class="modal-body mt-2">
+
+                    <div class="text-center text-dark">
+                        <div class="spinner-border " style="width: 3rem; height: 3rem;" role="status">
+                            <span class="sr-only">Loading...</span>
+
+                        </div>
+
+                    </div>
+                    <div class="text-center text-dark m-2">
+                        <span id="spanmsg" style="font-family: 'Times New Roman'; font-size: large"></span>
+                    </div>
+
                 </div>
+
 
             </div>
 
         </div>
     </div>
- 
-    <div class="container-fluid Header">
 
-        <div class="container">
+    <!-- Modal -- Confrimation Model--->
+    <div class="modal fade" id="confirmationModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ZTech Valves</h5>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="text-center text-dark m-2">
+
+                        <span id="spanConfirmMsg" style="font-family: 'Times New Roman'; font-size: large"></span>
+
+                        <div id="pngLoading" style="display: none">
+                            <div class="spinner-border mr-2" role="status">
+                            </div>
+                            <span>Please wait....</span>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnConfirm" class="btn btn-primary" onclick="ShowLoading()">YES</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -- Normal Message Model--->
+    <div class="modal fade" id="mdlNormalMessage" role="dialog" data-backdrop="static">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">ZTech Valves</h4>
+
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="text-left text-dark ">
+                        <i id="iconMsg" class="fa fa-check-circle fa-2x" style="color: green" runat="server"></i>
+                        <span id="lblMessage" class="text-center h4 " style="font-size: large" runat="server">Product Description :</span>
+
+                        <div id="pngNormalLoading" class="text-center" style="display: none">
+                            <div class="spinner-border mr-2" role="status">
+                            </div>
+                            <span>Please wait....</span>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnNormalMsgClose" type="button" class="btn btn-primary" onclick="RedicrectToURL()">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="myHeader">
+        <div class="container-fluid Header">
+
+        
             <div class="row ">
 
                 <div class="col-12  short_contact_list">
 
-                    <ul class="nav justify-content-center ">
+                    <ul class="nav justify-content-center  TopHeader">
 
                         <li class="mr-5"><a href="mailto:contact@ztechvalves.in"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Contact@ztechvalves.in</a></li>
                         <li class="mr-5"><a href="mailto:Ztechvalves@gmail.com"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Ztechvalves@gmail.com</a></li>
                         <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Gulam Rasool : +91 9137738202</a></li>
-                        <li class="mr-5"><a href="www.google.com"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Shakeel Ahmad : +91 9967716771</a></li>
+                        <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Shakeel Ahmad : +91 9967716771</a></li>
                     </ul>
 
                 </div>
             </div>
-        </div>
+        
 
 
 
     </div>
 
-    <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2">
+       <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2 ">
+        <div class="container">
+            <img src="img/logo.png" width="100" height="100" />
 
-        <img src="img/logo.png" width="100" height="100" />
-
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
-        <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
-            <ul class="navbar-nav mx-auto text-md-center text-left MyMenu">
-                <li class="nav-item">
-                    <a id="btnHome" class="nav-link mr-4" href="Home.aspx">HOME</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mr-4" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
-                    <div class="dropdown-menu">
-                        <a id="btnGate" class="dropdown-item mt-1" style="font-size: small" href="Gate_Valve.aspx">GATE VALVE</a>
-                        <a id="btnGlob" class="dropdown-item mt-1" style="font-size: small" href="Globe_Valve.aspx">GLOBE VALVE</a>
-                        <a  id="btnSwing" class="dropdown-item mt-1" style="font-size: small" href="Swing_Check_Valve.aspx">SWING CHECK VALVE</a>
+            <div class="navbar-collapse collapse justify-content-between align-items-center w-100 " id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-md-center text-left MyMenu">
+                    <li class="nav-item">
+                        <a id="btnHome" class="nav-link mr-4" href="Home.aspx">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mr-4" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                        <div class="dropdown-menu">
+                            <a id="btnGate" class="dropdown-item mt-1" style="font-size: small" href="Gate_Valve.aspx">GATE VALVE</a>
+                            <a id="btnGlob" class="dropdown-item mt-1" style="font-size: small" href="Globe_Valve.aspx">GLOBE VALVE</a>
+                            <a id="btnSwing" class="dropdown-item mt-1" style="font-size: small" href="Swing_Check_Valve.aspx">SWING CHECK VALVE</a>
 
-                        <a id="btnBall" class="dropdown-item mt-1" style="font-size: small" href="BALL_VALVE.aspx">BALL VALVE  </a>
-                        <a  id="Forged" class="dropdown-item mt-1" style="font-size: small" href="FORGED_VALVE.aspx">FORGED VALVE</a>
-                        <a  id="BUTTERFLY" class="dropdown-item mt-1" style="font-size: small" href="BUTTERFLY_VALVE.aspx">BUTTERFLY VALVE</a>
+                            <a id="btnBall" class="dropdown-item mt-1" style="font-size: small" href="BALL_VALVE.aspx">BALL VALVE  </a>
+                            <a id="Forged" class="dropdown-item mt-1" style="font-size: small" href="FORGED_VALVE.aspx">FORGED VALVE</a>
+                            <a id="BUTTERFLY" class="dropdown-item mt-1" style="font-size: small" href="BUTTERFLY_VALVE.aspx">BUTTERFLY VALVE</a>
 
+
+                        </div>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a id="btnAdminPage" class="nav-link" href="Admin_Login.aspx">ADMIN</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a id="btnAboutUS" class="nav-link " href="AboutUS.aspx">ABOUT US</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a id="btnContactUs" class="nav-link " href="Contactus.aspx">CONTACT US</a>
+                    </li>
+                </ul>
+                <div id="pnlProfile" class="dropdown" visible="false" runat="server">
+                    <button class="btn btn-primary dropdown-toggle" style="background-color: #06456f; color: white; font-family: 'Times New Roman'" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login By : Admin
+                    </button>
+                    <div class="dropdown-menu" style="font-family: 'Times New Roman'" aria-labelledby="dropdownMenuButton">
+                        <a id="btnMyProfile" class="dropdown-item" href="MyProfile.aspx">My Profile</a>
+                        <a id="btnLogout" class="dropdown-item" href="RequestHandler.aspx?action=logout">Logout</a>
 
                     </div>
-                </li>
-                <li class="nav-item mr-4">
-                    <a id="btnAdminPage" class="nav-link" href="Admin_Login.aspx">ADMIN</a>
-                </li>
-                <li class="nav-item mr-4">
-                    <a id="btnAboutUS" class="nav-link " href="AboutUS.aspx">ABOUT US</a>
-                </li>
-                <li class="nav-item mr-4">
-                    <a id="btnContactUs" class="nav-link " href="Contactus.aspx">CONTACT US</a>
-                </li>
-            </ul>
-            <div id="pnlProfile" class="dropdown" visible="false" runat="server">
-                <button class="btn btn-primary dropdown-toggle" style="background-color: #06456f; color: white; font-family: 'Times New Roman'" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login By : Admin
-                </button>
-                <div class="dropdown-menu" style="font-family: 'Times New Roman'" aria-labelledby="dropdownMenuButton">
-                    <a id="btnMyProfile" class="dropdown-item" href="MyProfile.aspx?1">My Profile</a>
-                    <a id="btnLogout" class="dropdown-item" href="RequestHandler.aspx?action=logout">Logout</a>
-
                 </div>
+
             </div>
 
         </div>
+
+
     </nav>
+   
 
-
-    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+    </div>
+    
+    
+  <div class="content"">
+      <img src="img/scrollTop.png" id="myBtn"  onclick="topFunction()" width="80" height="80"/>
+    
+       <asp:ContentPlaceHolder ID="MainContent"  runat="server">
+         
     </asp:ContentPlaceHolder>
+  </div>
+   
+
+
+    <script>
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+
+                header.classList.add("sticky");
+                header.classList.add("MyHeader2");
+
+                document.getElementById("myBtn").style.display = "block";
+
+
+            } else {
+
+                header.classList.remove("sticky");
+                header.classList.remove("MyHeader2");
+
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+    </script>
+
+
 
 
     <!-- Footer -->
-    <footer class="page-footer font-small mdb-color pt-4 bg-dark Zfooter">
+    <footer class="page-footer font-small mdb-color pt-4 bg-dark Zfooter" style="font-family:'Times New Roman'">
 
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
@@ -185,7 +326,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">ZTECH VALVES</h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold"  style="font-family:'Times New Roman'">ZTECH VALVES</h6>
                     <p>
                         We would like introduce our self, we are one of the established Industrial valves manufacturing company in Ahmedabad, INDIA with all latest manufacturing facility.
                         <br />
@@ -198,24 +339,24 @@
 
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold"  style="font-family:'Times New Roman'">Products</h6>
                     <p>
-                        <a href="#!">GATE VALVE</a>
+                        <a href="Gate_Valve.aspx">GATE VALVE</a>
                     </p>
                     <p>
-                        <a href="#!">GLOBE VALVE</a>
+                        <a href="Globe_Valve.aspx">GLOBE VALVE</a>
                     </p>
                     <p>
-                        <a href="#!">SWING CHECK VALVE</a>
+                        <a href="Swing_Check_Valve.aspx">SWING CHECK VALVE</a>
                     </p>
                     <p>
-                        <a href="#!">BALL VALVE</a>
+                        <a href="BALL_VALVE.aspx">BALL VALVE</a>
                     </p>
                     <p>
-                        <a href="#!">FORGED VALVE</a>
+                        <a href="FORGED_VALVE.aspx">FORGED VALVE</a>
                     </p>
                     <p>
-                        <a href="#!">BUTTERFLY VALVE</a>
+                        <a href="BUTTERFLY_VALVE.aspx">BUTTERFLY VALVE</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -224,15 +365,15 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold"  style="font-family:'Times New Roman'">Useful links</h6>
                     <p>
-                        <a href="#!">Admin Manager</a>
+                        <a href="Admin_Manager.aspx">Admin Manager</a>
                     </p>
                     <p>
-                        <a href="#!">About Us</a>
+                        <a href="AboutUS.aspx">About Us</a>
                     </p>
                     <p>
-                        <a href="#!">Contact Us</a>
+                        <a href="Contactus.aspx">Contact Us</a>
                     </p>
 
                 </div>
@@ -253,7 +394,7 @@
                         <i class="fa fa-phone mr-3"></i>+91 9137738202
                     </p>
                     <p>
-                        <i class="fa fa-print mr-3"></i>+91 9967716771
+                         <i class="fa fa-phone mr-3"></i>+91 9967716771
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -271,10 +412,8 @@
 
                     <!--Copyright-->
                     <p class="text-center text-lg-center">
-                        © 2020 Copyright:
-          <a href="#">
-              <strong>ZTECH VALVES</strong>
-          </a>
+                        © 2020 Copyright:ZTECH VALVES
+          
                     </p>
 
                 </div>
@@ -288,8 +427,5 @@
 
     </footer>
     <!-- Footer -->
-
-
-
 </body>
 </html>

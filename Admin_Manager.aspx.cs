@@ -77,6 +77,7 @@ public partial class Admin_Manager : System.Web.UI.Page
         Session["ProductID"] = cmbProduct.SelectedValue;
         if (cmbProduct.SelectedItem!=null)
         {
+         
             Session["ProductName"] = cmbProduct.SelectedItem.ToString();
             Response.Redirect("UpdateProduct.aspx");
         }

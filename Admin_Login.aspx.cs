@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Web.UI.HtmlControls;
 
 public partial class Admin_Login : System.Web.UI.Page
 {
@@ -49,11 +50,32 @@ public partial class Admin_Login : System.Web.UI.Page
         {
             Control control = Page.Master.FindControl("pnlProfile");
             control.Visible = false;
-            Response.Write("<script>alert('Incorrect User Name or passworde');</script>");
+            NavigationURL.Value = "Admin_Login.aspx";
+            ShowMessageBox("Incorrect User Name or Password.",false);
+           
 
 
 
         }
 
+    }
+    private void ShowMessageBox(string msg, bool IsSuccess = true)
+    {
+        HtmlGenericControl lblUserVal = (HtmlGenericControl)Page.Master.FindControl("lblMessage");
+        lblUserVal.InnerText = msg;
+        string script = "";
+        if (IsSuccess)
+        {
+            script = "$('#mdlNormalMessage').modal(); ";
+
+        }
+        else
+        {
+            script = "$('#mdlNormalMessage').modal(); " +
+                     "$('#iconMsg').removeClass('fa-check-circle').addClass('fa-times-circle');" +
+                     "$('#iconMsg').css('color','red');";
+        }
+
+        Page.ClientScript.RegisterStartupScript(this.GetType(), "func", script, true);
     }
 }

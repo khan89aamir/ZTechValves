@@ -33,6 +33,11 @@ public partial class UpdateProductImage : System.Web.UI.Page
 
             //============== End of Page load code ===================
         }
+        else
+        {
+            // poseted back
+
+        }
         if (Session["ProductName"] != null)
         {
             ProductName = Session["ProductName"].ToString();

@@ -1,8 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="Admin_Login.aspx.cs" Inherits="Admin_Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="Admin_Login.aspx.cs" Inherits="Admin_Login"  ClientIDMode="static"  %>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
+
+   
 
     <form id="frmLogin" class="needs-validation Loginform" novalidate runat="server">
         <div class="form-row">
@@ -39,14 +41,12 @@
 
         <span id="picSpinner" class="spinner-border spinner-border invisible" role="status" aria-hidden="true"></span>
         <asp:Button ID="btnLogin" class="btn btn-primary btn-block " Style="background-color: #06456f" type="submit" runat="server" Text="Login" OnClientClick="validate()" OnClick="btnLogin_Click" />
-
+          <input type="text"  id="NavigationURL" value="NA" runat="server" style="display:none"/>
 
         <hr />
+
         <a href="#" class="link" style="color: #06456f" data-toggle="modal" data-target="#exampleModal">Forget Password?</a>
     </form>
-
-
-
 
 
     <!-- Modal -->

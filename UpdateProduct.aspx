@@ -82,7 +82,14 @@
                         if (form.checkValidity() === false) {
                             event.preventDefault();
                             event.stopPropagation();
+                          
                         }
+                        else {
+                            // if validtion is OK then only show the loading message
+                            $("#spanmsg").text("Updating Data Please Wait....");
+                            $('#loadingBox').modal();
+                        }
+
                         form.classList.add('was-validated');
                     }, false);
                 });
