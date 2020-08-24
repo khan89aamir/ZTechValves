@@ -75,8 +75,10 @@
 
     <link rel="stylesheet" href="css/w3.css">
 
-
-    <center><h1 style="font-family:'Times New Roman, Times, serif;'">GATE VALVES </h1></center>
+    <p class="d-block text-center" style="font-family:'Times New Roman';font-size:xx-large">
+        GATE VALVES
+    </p>
+   
 
     <div>
         <div id="carouselExampleIndicators" class="carousel slide ml-auto mr-auto" data-ride="carousel" data-interval="2000">
