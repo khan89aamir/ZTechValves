@@ -6,7 +6,6 @@ using System.Data;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 
-
 /// <summary>
 /// Summary description for clsCoreApp
 /// </summary>
@@ -46,7 +45,6 @@ public class clsMySQLCoreApp
         }
         catch (Exception ex)
         {
-          
             return false;
         }
     }
@@ -81,6 +79,11 @@ public class clsMySQLCoreApp
                 {
                     p.Size = -1;
                 }
+                else if (p.MySqlDbType == MySqlDbType.Decimal)
+                {
+                    p.Precision = 18;
+                    p.Scale = 3;
+                }
             }
 
             lstSQLParameter.Add(p);
@@ -99,8 +102,6 @@ public class clsMySQLCoreApp
         DataTable dtTable = new DataTable();
         try
         {
-          
-
             string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             using (MySqlConnection con = new MySqlConnection(constr))
             {
@@ -108,13 +109,10 @@ public class clsMySQLCoreApp
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {
-                        
                         cmd.Connection = con;
                         sda.SelectCommand = cmd;
                         con.Open();
                         sda.Fill(dtTable);
-
-
                     }
                 }
             }
@@ -122,7 +120,6 @@ public class clsMySQLCoreApp
         catch (Exception  ex)
         {
             strErrorText = ex.ToString();
-           
         }
      
         return dtTable;
@@ -132,15 +129,12 @@ public class clsMySQLCoreApp
         int result = -1;
         try
         {
-
-
             string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             using (MySqlConnection con = new MySqlConnection(constr))
             {
                 using (MySqlCommand cmd = new MySqlCommand(query))
                 {
                     cmd.Connection = con;
-                 
                     con.Open();
                     result= cmd.ExecuteNonQuery();
                     con.Close();
@@ -150,7 +144,6 @@ public class clsMySQLCoreApp
         catch (Exception ex)
         {
             strErrorText = ex.ToString();
-
         }
 
         return result;
@@ -165,7 +158,6 @@ public class clsMySQLCoreApp
     }
     private void AddRowToOutputParm(string name, object value)
     {
-
         DataRow dataRow = dtOutputParm.NewRow();
         dataRow["ParmName"] = name.Replace("@", "");
         dataRow["Value"] = value;
@@ -185,16 +177,12 @@ public class clsMySQLCoreApp
             dtOutputParm.Clear();
         }
 
-       
-      
-
         try
         {
             string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             using (MySqlConnection con=new MySqlConnection(constr))
             {
                 MySqlCommand cmd = new MySqlCommand();
-
 
                 cmd.CommandText = strStoreProcedureName;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -222,8 +210,6 @@ public class clsMySQLCoreApp
                 result = true;
                 con.Close();
             }
-          
-           
         }
         catch (Exception ex)
         {
@@ -243,7 +229,6 @@ public class clsMySQLCoreApp
     /// <returns>Data Set</returns>
     public DataSet ExecuteStoreProcedure_Get(string strStoreProcedureName)
     {
-      
         // clear the output parm table for fresh data.
         if (dtOutputParm != null && dtOutputParm.Rows.Count > 0)
         {
@@ -257,7 +242,6 @@ public class clsMySQLCoreApp
           
             try
             {
-               
                MySqlDataAdapter ObjDA = new MySqlDataAdapter();
                 cmd.CommandText = strStoreProcedureName;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -292,11 +276,8 @@ public class clsMySQLCoreApp
                 return null;
             }
             ResetData();
-
         }
       
         return ds;
     }
-
-
 }

@@ -14,7 +14,7 @@ public partial class UpdateProduct : System.Web.UI.Page
     protected string Description { get; set; }
     protected string ConstFeatures { get; set; }
     protected string SizeDetails { get; set; }
-   
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["ProductName"] != null)
@@ -32,19 +32,15 @@ public partial class UpdateProduct : System.Web.UI.Page
             control.Visible = true;
             LoadProductDetails();
         }
-                  
     }
-  
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-       
     }
 
     private void UpdateProductData()
     {
-       
-
-         ProductName = Request["txtProductName"].ToString();
+        ProductName = Request["txtProductName"].ToString();
         string strProdDesc = Request["txtProdDesc"].ToString();
         string strConsFeature = Request["txtConsFeature"].ToString();
         string strSizeDetails = Request["txtSizeDetails"].ToString();
@@ -64,11 +60,10 @@ public partial class UpdateProduct : System.Web.UI.Page
         {
             ProductID = Convert.ToInt32(Session["ProductID"]);
         }
-       
+
         clsMySQLCoreApp ObjDAL = new clsMySQLCoreApp();
 
-        
-          ObjDAL.SetStoreProcedureData("ProductName", MySql.Data.MySqlClient.MySqlDbType.VarChar, ProductName);
+        ObjDAL.SetStoreProcedureData("ProductName", MySql.Data.MySqlClient.MySqlDbType.VarChar, ProductName);
         ObjDAL.SetStoreProcedureData("PID", MySql.Data.MySqlClient.MySqlDbType.Int32, ProductID);
         ObjDAL.SetStoreProcedureData("Description", MySql.Data.MySqlClient.MySqlDbType.LongText, strProdDesc);
         ObjDAL.SetStoreProcedureData("ConstFeatures", MySql.Data.MySqlClient.MySqlDbType.LongText, strConsFeature);
@@ -82,29 +77,23 @@ public partial class UpdateProduct : System.Web.UI.Page
         {
             Session["UpdateStatus"] = "1";
             Response.Redirect("Admin_Manager.aspx");
-           
         }
     }
     private void LoadProductDetails()
     {
-
         clsMySQLCoreApp ObjDAL = new clsMySQLCoreApp();
-       DataTable dtProductDetails= ObjDAL.ExecuteSelectStatement("select * from View_ProductDetails where ProductID="+ ProductID);
-        if (dtProductDetails!=null && dtProductDetails.Rows.Count>0)
+        DataTable dtProductDetails = ObjDAL.ExecuteSelectStatement("SELECT * FROM View_ProductDetails WHERE ProductID=" + ProductID);
+        if (dtProductDetails != null && dtProductDetails.Rows.Count > 0)
         {
             ProductID = dtProductDetails.Rows[0]["ProductID"].ToString();
-            Description= dtProductDetails.Rows[0]["Description"].ToString();
-            ConstFeatures= dtProductDetails.Rows[0]["ConstFeatures"].ToString();
+            Description = dtProductDetails.Rows[0]["Description"].ToString();
+            ConstFeatures = dtProductDetails.Rows[0]["ConstFeatures"].ToString();
             ProductName = dtProductDetails.Rows[0]["ProductName"].ToString();
             SizeDetails = dtProductDetails.Rows[0]["SizeDetails"].ToString();
         }
-           
-
     }
     protected void btnSave_Click(object sender, EventArgs e)
     {
         UpdateProductData();
-
     }
-    
 }

@@ -135,27 +135,21 @@ public partial class UpdateProductImage : System.Web.UI.Page
         {
             // Do nothing 
         }
-       
     }
     
     private void ShowMessageBox(string msg)
     {
-
         lblMessage.InnerText=msg;
         Page.ClientScript.RegisterStartupScript(this.GetType(), "func", "$('#myModal').modal();", true);
     }
     private void SaveDataIntoDB(string strName, string path, int flag)
     {
-
-
         clsMySQLCoreApp ObjDAL = new clsMySQLCoreApp();
         ObjDAL.SetStoreProcedureData("ParmPID", MySql.Data.MySqlClient.MySqlDbType.Int32, ProductID);
         ObjDAL.SetStoreProcedureData("ParmPath ", MySql.Data.MySqlClient.MySqlDbType.VarChar, path);
         ObjDAL.SetStoreProcedureData("ParmFileName  ", MySql.Data.MySqlClient.MySqlDbType.VarChar, strName);
         ObjDAL.SetStoreProcedureData("ParmFlag", MySql.Data.MySqlClient.MySqlDbType.Int32, flag);
         ObjDAL.ExecuteStoreProcedure_DML("spr_InsertProductImages");
-        
-
     }
 
     private void LoadImages()
@@ -167,10 +161,5 @@ public partial class UpdateProductImage : System.Web.UI.Page
             Repeater2.DataSource = dtProductImages;
             Repeater2.DataBind();
         }
-
     }
-
-   
-
-   
 }

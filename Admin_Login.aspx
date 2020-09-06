@@ -1,10 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="Admin_Login.aspx.cs" Inherits="Admin_Login"  ClientIDMode="static"  %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="Admin_Login.aspx.cs" Inherits="Admin_Login" ClientIDMode="static" %>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
-
-
-   
 
     <form id="frmLogin" class="needs-validation Loginform" novalidate runat="server">
         <div class="form-row">
@@ -41,7 +38,7 @@
 
         <span id="picSpinner" class="spinner-border spinner-border invisible" role="status" aria-hidden="true"></span>
         <asp:Button ID="btnLogin" class="btn btn-primary btn-block " Style="background-color: #06456f" type="submit" runat="server" Text="Login" OnClientClick="validate()" OnClick="btnLogin_Click" />
-          <input type="text"  id="NavigationURL" value="NA" runat="server" style="display:none"/>
+        <input type="text" id="NavigationURL" value="NA" runat="server" style="display: none" />
 
         <hr />
 
@@ -70,15 +67,14 @@
 
 
                                 <label for="validationCustom01">E-Mail ID :</label>
-                                <input type="email" class="form-control" id="validationCustom01" value="" placeholder="Enter Email address" required>
+                                <input type="email" class="form-control" id="txtMailID" name="txtMailID" value="" placeholder="Enter Email address" required>
                             </div>
 
                         </div>
                         <br />
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button id="btnSendEmail" class="btn btn-primary" type="submit">Submit</button>
+                        <%--<button id="btnSendEmail" class="btn btn-primary" type="button" onclick="SendMail()">Submit</button>--%>
                     </form>
-
-
 
                 </div>
 
@@ -94,16 +90,33 @@
                 if ((element.type === "text" || element.type === "password") && element.value === "") {
                     inc++;
                 }
-
             }
             if (inc == 0) {
                 var element = document.getElementById("picSpinner");
                 element.classList.remove("invisible");
                 element.classList.add("visible");
             }
-
-
         }
+
+        //function SendMail() {
+        //    var strMail = document.getElementById('txtMailID').value;
+        //    //alert(strMail);
+        //   $.ajax({
+        //        type: "POST",
+        //        url: "RequestHandler.aspx/ForgotPass",
+        //       data: { mail: strMail},
+        //        contentType: "application/json; charset=utf-8",
+        //        dataType: "json",
+        //        success: OnSuccess,
+        //        failure: function (response) {
+        //            alert(response.d);
+        //        }
+        //    });
+        //}
+        //function OnSuccess(response) {
+        //    alert(response.d);
+        //}
+
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
@@ -124,8 +137,6 @@
             }, false);
         })();
 
-
     </script>
 
 </asp:Content>
-

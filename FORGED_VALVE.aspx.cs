@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Gate_Valve : System.Web.UI.Page
+public partial class FORGED_VALVE : System.Web.UI.Page
 {
     protected string ProductName { get; set; }
 
@@ -18,13 +18,14 @@ public partial class Gate_Valve : System.Web.UI.Page
             LoadCarouselRepeater();
         }
     }
+
     private void LoadData()
     {
         clsMySQLCoreApp ObjDAL = new clsMySQLCoreApp();
 
-        // dont write db_name.dbo.viewname, it doesn't work in my sq. 1 is hardcode for gate which is fixed
+        // dont write db_name.dbo.viewname, it doesn't work in my sq. 5 is hardcode for Forged valve which is fixed
 
-        DataTable dtProduct = ObjDAL.ExecuteSelectStatement("SELECT ProductName,ConstFeatures,SizeDetails FROM ztech.View_ProductDetails WHERE ProductID=1");
+        DataTable dtProduct = ObjDAL.ExecuteSelectStatement("SELECT ProductName,ConstFeatures,SizeDetails FROM ztech.View_ProductDetails WHERE ProductID=5");
         if (dtProduct != null && dtProduct.Rows.Count > 0)
         {
             string[] constFeature = dtProduct.Rows[0]["ConstFeatures"].ToString().Split('\n');
@@ -45,8 +46,8 @@ public partial class Gate_Valve : System.Web.UI.Page
 
         // dont write db_name.dbo.viewname, it doesn't work in my sq. 1 is hardcode for gate which is fixed
 
-        DataTable dtProduct = ObjDAL.ExecuteSelectStatement("SELECT Path FROM ztech.tblImages WHERE ProductID=1 AND flag=0");
-        if (dtProduct!=null && dtProduct.Rows.Count > 0)
+        DataTable dtProduct = ObjDAL.ExecuteSelectStatement("SELECT Path FROM ztech.tblImages WHERE ProductID=5 AND flag=0");
+        if (dtProduct != null && dtProduct.Rows.Count > 0)
         {
             CarouselRepeater.DataSource = dtProduct;
             CarouselRepeater.DataBind();

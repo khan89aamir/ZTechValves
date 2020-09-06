@@ -2,8 +2,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
-
-
     <div id="pnlUpdateProduct" class="container" runat="server">
         <div class="alert alert-primary">
             <span class="fa fa-lightbulb-o fa-2x mr-2" style="color: #06456f"></span>Change your product details and click on Update button.
@@ -58,16 +56,12 @@
                 <div class="col-md-6 mb-3 text-right">
                     <asp:Button ID="btnSave" class="btn btn-primary" runat="server" Text="Update" OnClick="btnSave_Click" />
                     <button id="btnCancel" type="reset" class="btn btn-secondary" onclick="return confirm_reset();">Cancel</button>
-
-
                 </div>
 
             </div>
 
-
         </form>
     </div>
-
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -96,7 +90,6 @@
             }, false);
         })();
 
-
     </script>
     <script>
 
@@ -123,4 +116,3 @@
         }
     </script>
 </asp:Content>
-

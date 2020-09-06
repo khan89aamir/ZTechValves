@@ -3,8 +3,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
-
-
     <%--DO NOT remove this Modal code from top of the page, else it wont Work--%>
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -68,7 +66,6 @@
 
                 </div>
 
-
             </div>
         </form>
     </div>
@@ -101,16 +98,12 @@
         })();
         function UpdateDetails() {
 
-
             var cmbProduct = document.getElementById("validationCustom04");
             if (cmbProduct.selectedIndex > 0) {
-
 
                 document.getElementById("pnlDetails").style.display = "none";
                 document.getElementById("pnlUpdateProduct").style.display = "block";
             }
-
-
         }
 
         $(document).ready(function () {
@@ -120,11 +113,7 @@
                 var fileName = $(this).val().split("\\").pop();
                 $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
             });
-
-           
-
         });
 
     </script>
 </asp:Content>
-

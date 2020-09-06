@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="MyProfile.aspx.cs" Inherits="MyProfile" ClientIDMode="static" %>
 
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
     <div class="container">
@@ -10,7 +9,6 @@
         <div class="alert alert-warning" role="alert">
             <span class="fa fa-lightbulb-o fa-2x mr-2" style="color: #06456f"></span>Update your Email address and chnage your password.
         </div>
-
 
         <div class="card">
             <div class="card-header">
@@ -67,8 +65,6 @@
 
     <script>
 
-      
-
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
             'use strict';
@@ -103,4 +99,3 @@
     </script>
 
 </asp:Content>
-

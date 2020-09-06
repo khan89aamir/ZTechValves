@@ -36,11 +36,15 @@
     <script>
 
         $(document).ready(function () {
-            $('.dropdown-menu a, #btnAdminPage, #btnAboutUS, #btnHome, #btnContactUs, #btnMyProfile, #btnLogout,  #btnDeleteImage ').click(function (e) {
+            $('.dropdown-menu a, #btnAdminPage, #btnAboutUS, #btnHome, #btnContactUs, #btnMyProfile, #btnLogout,  #btnDeleteImage,  #btnEmail').click(function (e) {
 
                 if (e.currentTarget.id == "btnDeleteImage") {
 
                     $("#spanmsg").text("Deleting Image Please Wait....");
+                }
+                else if (e.currentTarget.id == "btnDeleteImage") {
+
+                    $("#spanmsg").text("Sending Email, Please Wait....");
                 }
                 else {
                     $("#spanmsg").text("Loading Please Wait.....");
@@ -185,6 +189,7 @@
             </div>
         </div>
     </div>
+
 
     <div id="myHeader">
         <div class="container-fluid Header">
