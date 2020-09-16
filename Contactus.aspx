@@ -247,6 +247,10 @@
                             event.preventDefault();
                             event.stopPropagation();
                         }
+                        else {
+                            $("#spanmsg").text("Sending Email, Please Wait....");
+                            $('#loadingBox').modal();
+                        }
                         form.classList.add('was-validated');
                     }, false);
                 });

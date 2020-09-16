@@ -58,13 +58,12 @@
                 </div>
                 <div class="modal-body">
 
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" action="RequestHandler.aspx?action=forgotpass" method="post" novalidate>
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="alert alert-primary" role="alert">
                                     Your password will be sent to this E-Mail ID
                                 </div>
-
 
                                 <label for="validationCustom01">E-Mail ID :</label>
                                 <input type="email" class="form-control" id="txtMailID" name="txtMailID" value="" placeholder="Enter Email address" required>
