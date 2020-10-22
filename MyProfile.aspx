@@ -7,7 +7,7 @@
             <h3>My Profile </h3>
         </div>
         <div class="alert alert-warning" role="alert">
-            <span class="fa fa-lightbulb-o fa-2x mr-2" style="color: #06456f"></span>Update your Email address and chnage your password.
+            <span class="fa fa-lightbulb-o fa-2x mr-2" style="color: #06456f"></span>Update your Email address and change your password.
         </div>
 
         <div class="card">
