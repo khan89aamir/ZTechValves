@@ -32,7 +32,7 @@ public partial class RequestHandler : System.Web.UI.Page
             }
             else if (action == "changeEmail")
             {
-                string newmail = Request.Form["txtemail"].ToString();
+                string newmail = Request.Form["ctl00$MainContent$txtemail"].ToString();
                 ChagngeEmail(newmail);
             }
             else if (action == "logout")
