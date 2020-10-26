@@ -22,7 +22,7 @@
 
     <div class="jumbotron jumbotron-fluid" style="background-color: #06456f; color: white">
         <div class="container">
-            <h1 class="display-5">About ZTech Valves</h1>
+            <h1 class="display-5">About SALKI VALVES</h1>
             <p class="lead">We are one of the established Industrial valves manufacturing company in Ahmedabad, INDIA with all latest manufacturing facility..</p>
             <p>
                 We are ISO 9001: 2015 certified company has an active quality management system to give good quality products. Please send us the requirements for valves so that we can give you the best prices.

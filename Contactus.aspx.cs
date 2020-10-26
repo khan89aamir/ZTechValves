@@ -75,7 +75,7 @@ public partial class Contactus : System.Web.UI.Page
                 string bodyHTML = string.Empty;
                 bool isSent = false;
 
-                bodyHTML = "<p>Dear ZTECH VALVE,</p>";
+                bodyHTML = "<p>Dear SALKI VALVE,</p>";
                 bodyHTML += "<p>" + strname + " is interested in your business.</p>";
                 bodyHTML += "<p>PFB Message From " + strname + ".</p> <p>" + strmessage + " </p>";
                 bodyHTML += "<p>PFB Contact Details.</p>";

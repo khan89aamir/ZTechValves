@@ -106,7 +106,7 @@ public partial class RequestHandler : System.Web.UI.Page
         bool isSent = false;
         try
         {
-            bodyHTML = "<p>Dear ZTECH VALVE,</p>";
+            bodyHTML = "<p>Dear SALKI VALVE,</p>";
             bodyHTML += "<p>We've received a request to reset your password.</p>";
             bodyHTML += "<p>PFB Reset Password for " + mail + ".</p>";
             bodyHTML += @" <html><table width = '300' cellpadding = '0' cellspacing = '0' align = 'left' border = '1' >"

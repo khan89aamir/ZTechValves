@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
 
-    <title>ZTech</title>
+    <title>SALKI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -60,12 +60,12 @@
                 $("#spanmsg").text("Loading Please Wait....");
                 $('#loadingBox').modal();
             });
-          
+
 
 
         });
 
-      
+
         function RedicrectToURL() {
 
 
@@ -100,7 +100,7 @@
                 <div class="modal-header">
                     <span>
                         <img src="img/favicon-32x32.png" /></span>
-                    <h5 class="modal-title" style="font-family: 'Times New Roman';">ZTech Valves</h5>
+                    <h5 class="modal-title" style="font-family: 'Times New Roman';">SALKI VALVES</h5>
 
                 </div>
                 <div class="modal-body mt-2">
@@ -125,11 +125,11 @@
     </div>
 
     <!-- Modal -- Confrimation Model--->
-    <div class="modal fade" id="confirmationModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal fade" id="confirmationModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">ZTech Valves</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">SALKI VALVES</h5>
 
                 </div>
                 <div class="modal-body">
@@ -163,7 +163,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">ZTech Valves</h4>
+                    <h4 class="modal-title">SALKI VALVES</h4>
 
 
                 </div>
@@ -190,99 +190,94 @@
         </div>
     </div>
 
-
     <div id="myHeader">
         <div class="container-fluid Header">
-
-        
             <div class="row ">
 
                 <div class="col-12  short_contact_list">
 
                     <ul class="nav justify-content-center  TopHeader">
 
-                        <li class="mr-5"><a href="mailto:contact@ztechvalves.in"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Contact@ztechvalves.in</a></li>
-                        <li class="mr-5"><a href="mailto:Ztechvalves@gmail.com"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Ztechvalves@gmail.com</a></li>
+                        <li class="mr-5"><a href="mailto:contact@ztechvalves.in"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Info@salkivalves.com</a></li>
+                        <li class="mr-5"><a href="mailto:salkivalves@gmail.com"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>salkivalves@gmail.com</a></li>
                         <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Gulam Rasool : +91 9137738202</a></li>
                         <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Shakeel Ahmad : +91 9967716771</a></li>
                     </ul>
 
                 </div>
             </div>
-        
+        </div>
+
+        <br/>
+        <%--<div class="container-fluid">--%>
+            <div class="row justify-content-center">
+                <img src="img/logo.png" width="135" height="95" />
+                <img src="img/SALKI VALVES Company.png" width="500" height="75" />
+            </div>
+        <%--</div>--%>
+
+        <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2 ">
+            <div class="container">
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
 
+                <div class="navbar-collapse collapse justify-content-between align-items-center w-100 " id="collapsingNavbar2">
+                    <ul class="navbar-nav mx-auto text-md-center text-left MyMenu">
+                        <li class="nav-item">
+                            <a id="btnHome" class="nav-link mr-4" href="Home.aspx">HOME</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-4" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                            <div class="dropdown-menu">
+                                <a id="btnGate" class="dropdown-item mt-1" style="font-size: small" href="Gate_Valve.aspx">GATE VALVE</a>
+                                <a id="btnGlob" class="dropdown-item mt-1" style="font-size: small" href="Globe_Valve.aspx">GLOBE VALVE</a>
+                                <a id="btnSwing" class="dropdown-item mt-1" style="font-size: small" href="Swing_Check_Valve.aspx">SWING CHECK VALVE</a>
 
-    </div>
-
-       <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2 ">
-        <div class="container">
-            <img src="img/logo.png" width="100" height="100" />
-
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                                <a id="btnBall" class="dropdown-item mt-1" style="font-size: small" href="BALL_VALVE.aspx">BALL VALVE  </a>
+                                <a id="Forged" class="dropdown-item mt-1" style="font-size: small" href="FORGED_VALVE.aspx">FORGED VALVE</a>
+                                <a id="BUTTERFLY" class="dropdown-item mt-1" style="font-size: small" href="BUTTERFLY_VALVE.aspx">BUTTERFLY VALVE</a>
 
 
-            <div class="navbar-collapse collapse justify-content-between align-items-center w-100 " id="collapsingNavbar2">
-                <ul class="navbar-nav mx-auto text-md-center text-left MyMenu">
-                    <li class="nav-item">
-                        <a id="btnHome" class="nav-link mr-4" href="Home.aspx">HOME</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle mr-4" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
-                        <div class="dropdown-menu">
-                            <a id="btnGate" class="dropdown-item mt-1" style="font-size: small" href="Gate_Valve.aspx">GATE VALVE</a>
-                            <a id="btnGlob" class="dropdown-item mt-1" style="font-size: small" href="Globe_Valve.aspx">GLOBE VALVE</a>
-                            <a id="btnSwing" class="dropdown-item mt-1" style="font-size: small" href="Swing_Check_Valve.aspx">SWING CHECK VALVE</a>
-
-                            <a id="btnBall" class="dropdown-item mt-1" style="font-size: small" href="BALL_VALVE.aspx">BALL VALVE  </a>
-                            <a id="Forged" class="dropdown-item mt-1" style="font-size: small" href="FORGED_VALVE.aspx">FORGED VALVE</a>
-                            <a id="BUTTERFLY" class="dropdown-item mt-1" style="font-size: small" href="BUTTERFLY_VALVE.aspx">BUTTERFLY VALVE</a>
-
+                            </div>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a id="btnAdminPage" class="nav-link" href="Admin_Login.aspx">ADMIN</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a id="btnAboutUS" class="nav-link " href="AboutUS.aspx">ABOUT US</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a id="btnContactUs" class="nav-link " href="Contactus.aspx">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <div id="pnlProfile" class="dropdown" visible="false" runat="server">
+                        <button class="btn btn-primary dropdown-toggle" style="background-color: #06456f; color: white; font-family: 'Times New Roman'" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Login By : Admin
+                        </button>
+                        <div class="dropdown-menu" style="font-family: 'Times New Roman'" aria-labelledby="dropdownMenuButton">
+                            <a id="btnMyProfile" class="dropdown-item" href="MyProfile.aspx">My Profile</a>
+                            <a id="btnLogout" class="dropdown-item" href="RequestHandler.aspx?action=logout">Logout</a>
 
                         </div>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a id="btnAdminPage" class="nav-link" href="Admin_Login.aspx">ADMIN</a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a id="btnAboutUS" class="nav-link " href="AboutUS.aspx">ABOUT US</a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a id="btnContactUs" class="nav-link " href="Contactus.aspx">CONTACT US</a>
-                    </li>
-                </ul>
-                <div id="pnlProfile" class="dropdown" visible="false" runat="server">
-                    <button class="btn btn-primary dropdown-toggle" style="background-color: #06456f; color: white; font-family: 'Times New Roman'" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Login By : Admin
-                    </button>
-                    <div class="dropdown-menu" style="font-family: 'Times New Roman'" aria-labelledby="dropdownMenuButton">
-                        <a id="btnMyProfile" class="dropdown-item" href="MyProfile.aspx">My Profile</a>
-                        <a id="btnLogout" class="dropdown-item" href="RequestHandler.aspx?action=logout">Logout</a>
-
                     </div>
+
                 </div>
 
             </div>
-
-        </div>
-
-
-    </nav>
-   
+        </nav>
 
     </div>
-    
-    
-  <div class="content"">
-      <img src="img/scrollTop.png" id="myBtn"  onclick="topFunction()" width="80" height="80"/>
-    
-       <asp:ContentPlaceHolder ID="MainContent"  runat="server">
-         
-    </asp:ContentPlaceHolder>
-  </div>
-   
+
+
+    <div class="content">
+        <img src="img/scrollTop.png" id="myBtn" onclick="topFunction()" width="80" height="80" />
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
 
 
     <script>
@@ -302,13 +297,13 @@
             if (window.pageYOffset > sticky) {
 
 
-                if (screen.width>1000) {
+                if (screen.width > 1000) {
                     header.classList.add("sticky");
                     header.classList.add("MyHeader2");
 
                 }
-                
-               
+
+
                 document.getElementById("myBtn").style.display = "block";
 
 
@@ -318,7 +313,7 @@
                     header.classList.remove("sticky");
                     header.classList.remove("MyHeader2");
                 }
-               
+
 
                 document.getElementById("myBtn").style.display = "none";
             }
@@ -329,7 +324,7 @@
 
 
     <!-- Footer -->
-    <footer class="page-footer font-small mdb-color pt-4 bg-dark Zfooter" style="font-family:'Times New Roman'">
+    <footer class="page-footer font-small mdb-color pt-4 bg-dark Zfooter" style="font-family: 'Times New Roman'">
 
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
@@ -339,7 +334,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold"  style="font-family:'Times New Roman'">ZTECH VALVES</h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'Times New Roman'">SALKI VALVES</h6>
                     <p>
                         We would like introduce our self, we are one of the established Industrial valves manufacturing company in Ahmedabad, INDIA with all latest manufacturing facility.
                         <br />
@@ -352,7 +347,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold"  style="font-family:'Times New Roman'">Products</h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'Times New Roman'">Products</h6>
                     <p>
                         <a href="Gate_Valve.aspx">GATE VALVE</a>
                     </p>
@@ -378,7 +373,7 @@
 
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold"  style="font-family:'Times New Roman'">Useful links</h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'Times New Roman'">Useful links</h6>
                     <p>
                         <a href="Admin_Manager.aspx">Admin Manager</a>
                     </p>
@@ -401,13 +396,13 @@
                         <i class="fa fa-home mr-3"></i>SHED NO 17/1, GAUTAM SHAH INDUSTRIAL ESTATE, B/H MANIYAR TRAILER, NR SUNSHINE ESTATE, RAKHIAL, AHMEDABAD, GUJARAT, 380023
                     </p>
                     <p>
-                        <i class="fa fa-envelope mr-3"></i>Contact@ztechvalves.in
+                        <i class="fa fa-envelope mr-3"></i>Info@salkivalves.com
                     </p>
                     <p>
                         <i class="fa fa-phone mr-3"></i>+91 9137738202
                     </p>
                     <p>
-                         <i class="fa fa-phone mr-3"></i>+91 9967716771
+                        <i class="fa fa-phone mr-3"></i>+91 9967716771
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -425,7 +420,7 @@
 
                     <!--Copyright-->
                     <p class="text-center text-lg-center">
-                        © 2020 Copyright:ZTECH VALVES
+                        © 2020 Copyright:SALKI VALVES
           
                     </p>
 

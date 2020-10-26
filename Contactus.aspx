@@ -10,7 +10,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">ZTech</h4>
+                    <h4 class="modal-title">SALKI</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                 </div>
