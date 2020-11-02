@@ -60,21 +60,14 @@
                 $("#spanmsg").text("Loading Please Wait....");
                 $('#loadingBox').modal();
             });
-
-
-
         });
 
-
         function RedicrectToURL() {
-
 
             document.getElementById("pngNormalLoading").style.display = "block";
             document.getElementById("btnNormalMsgClose").disabled = true;
 
-
             var urlto = document.getElementById("NavigationURL").value;
-
 
             // Simulate an HTTP redirect:
             window.location.replace(urlto);
@@ -82,7 +75,6 @@
         function ShowLoading() {
 
             document.getElementById("btnConfirm").disabled = true;
-
             document.getElementById("pngLoading").style.display = "block";
         }
     </script>
@@ -115,10 +107,7 @@
                     <div class="text-center text-dark m-2">
                         <span id="spanmsg" style="font-family: 'Times New Roman'; font-size: large"></span>
                     </div>
-
                 </div>
-
-
             </div>
 
         </div>
@@ -211,7 +200,7 @@
         <br/>
         <%--<div class="container-fluid">--%>
             <div class="row justify-content-center">
-                <img src="img/logo.png" width="135" height="95" />
+                <img src="img/logo.png" width="135" height="110" />
                 <img src="img/SALKI VALVES Company.png" width="500" height="75" />
             </div>
         <%--</div>--%>
@@ -279,7 +268,6 @@
     </div>
 
 
-
     <script>
 
         // When the user clicks on the button, scroll to the top of the document
@@ -296,13 +284,11 @@
         function myFunction() {
             if (window.pageYOffset > sticky) {
 
-
                 if (screen.width > 1000) {
                     header.classList.add("sticky");
                     header.classList.add("MyHeader2");
 
                 }
-
 
                 document.getElementById("myBtn").style.display = "block";
 
@@ -314,14 +300,10 @@
                     header.classList.remove("MyHeader2");
                 }
 
-
                 document.getElementById("myBtn").style.display = "none";
             }
         }
     </script>
-
-
-
 
     <!-- Footer -->
     <footer class="page-footer font-small mdb-color pt-4 bg-dark Zfooter" style="font-family: 'Times New Roman'">
@@ -421,17 +403,13 @@
                     <!--Copyright-->
                     <p class="text-center text-lg-center">
                         © 2020 Copyright:SALKI VALVES
-          
                     </p>
 
                 </div>
 
-
             </div>
 
-
         </div>
-
 
     </footer>
     <!-- Footer -->

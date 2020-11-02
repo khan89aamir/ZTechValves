@@ -21,10 +21,14 @@
 
 .carousel-control-prev-icon {
     background-image: url("img/left.png");
+    height: 25px;
+    width: 25px;
 }
 
 .carousel-control-next-icon {
     background-image: url("img/Right.png");
+    height: 25px;
+    width: 25px;
 }
 
     .carousel-control-next-icon:hover {

@@ -169,15 +169,10 @@
         </div>
     </div>
 
-
-
-
     <script type="text/javascript">
         $(document).ready(function () {
             // set the first item active
             $(".carousel .carousel-item:first").addClass("active");
-
-
 
             var myCarousel = $(".carousel");
 
@@ -204,8 +199,6 @@
                 $('.carousel-item').addClass("w3-animate-right");
 
             });
-
-
 
         });
 
