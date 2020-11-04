@@ -142,7 +142,7 @@
         <font size="5" color="#05376d">TEST PRESSURE :</font>
 
         <div style="overflow-x: auto;">
-            <table class="ProductInfo" style="width: 50%;" border="1">
+            <table class="ProductInfo " style="width: 50%;" border="1">
 
                 <tr>
                     <th rowspan="2">MATERIAL</th>

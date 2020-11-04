@@ -98,6 +98,7 @@
     width: 25%;
     height: auto;
     font-family: "Times New Roman", Times, serif;
+    border:none
 }
 
 body {
@@ -215,6 +216,8 @@ ul.Mylst li {
 
 ul.Mylst {
     padding: 30px;
+    font-size:20px;
+    align-content:center;
 }
 
 #about {

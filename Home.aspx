@@ -69,6 +69,25 @@
             }
         }
         /*Till the width of screen goes below 768 px*/
+         @media screen and (max-width: 368px) and (min-width: 270px) {
+            .carsoulText {
+                color: black;
+                top: 50%;
+                position: absolute;
+                font-size: x-small !important;
+                width: 170px;
+            }
+
+            .carousel img {
+                width: 100% !important;
+                height: 245px;
+                max-height: 245px;
+                margin: auto;
+                display: block;
+            }
+        }
+
+
         @media screen and (max-width: 678px) and (min-width: 368px) {
             .carsoulText {
                 color: black;

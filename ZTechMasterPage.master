@@ -28,8 +28,35 @@
     <script src="js/boostrap/jquery-3.2.1.slim.min.js"></script>
     <script src="js/boostrap/popper.min.js"></script>
     <script src="js/boostrap/bootstrap.min.js"></script>
+    
+               
+      <style>
 
+          .Logo{
 
+              width:135px;
+              height:110px;
+          }
+          .Branding{
+
+               width:450px;
+              height:60px;
+          }
+
+        @media screen and (max-width: 400px) and (min-width: 200px) {
+            .Logo{
+
+              width:135px;
+              height:110px;
+          }
+          .Branding{
+
+               width:360px;
+              height:60px;
+          }
+        }
+      
+    </style>
 
 </head>
 <body>
@@ -198,12 +225,13 @@
         </div>
 
         <br/>
-        <%--<div class="container-fluid">--%>
+        <div class="container-fluid">
             <div class="row justify-content-center">
-                <img src="img/logo.png" width="135" height="110" />
-                <img src="img/SALKI VALVES Company.png" width="500" height="75" />
+           
+                <img class="img-fluid " width="520" src="img/SalkiBrandLogo.png" />
+               
             </div>
-        <%--</div>--%>
+        </div>
 
         <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2 ">
             <div class="container">
