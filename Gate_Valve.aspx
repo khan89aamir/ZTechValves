@@ -139,10 +139,11 @@
     <br />
     <br />
     <div class="card center">
-        <font size="5" color="#05376d">TEST PRESSURE :</font>
-
-        <div style="overflow-x: auto;">
-            <table class="ProductInfo " style="width: 50%;" border="1">
+        <div class="text-center">
+             <font size="5" color="#05376d">TEST PRESSURE</font>
+          
+    <div style="overflow-x: auto;">
+            <table class="ProductInfo w-50  centerDiv"   border="1">
 
                 <tr>
                     <th rowspan="2">MATERIAL</th>
@@ -204,25 +205,44 @@ CF8 M
                     <td>6-7</td>
                 </tr>
             </table>
-
+    </div>
+              
+      
         </div>
+       
 
     </div>
     <br />
     <div class="card center">
-        <font size="5" color="#05376d">CONSTRUCTION FEATURES:</font>
-        <ul class="Mylst">
+        <div class="d-flex justify-content-center">
+            <div >
+                  <font size="5" color="#05376d">CONSTRUCTION FEATURES: :</font>
+               
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          
+             
+        <ul class="Mylst ">
             <asp:Repeater ID="Repeater1" runat="server">
                 <ItemTemplate>
                     <li><%# Container.DataItem %>  </li>
                 </ItemTemplate>
             </asp:Repeater>
         </ul>
+        </div>
+      
     </div>
     <br />
 
     <div class="card center">
-        <font size="5" color="#05376d">SIZE :</font>
+         <div class="d-flex justify-content-center">
+            <div>
+                  <font size="5" color="#05376d">SIZE :</font>
+               
+          </div>
+        </div>
+       <div class="d-flex justify-content-center">
         <ul class="Mylst">
             <asp:Repeater ID="Repeater2" runat="server">
                 <ItemTemplate>
@@ -230,6 +250,7 @@ CF8 M
                 </ItemTemplate>
             </asp:Repeater>
         </ul>
+           </div>
     </div>
     <br />
 

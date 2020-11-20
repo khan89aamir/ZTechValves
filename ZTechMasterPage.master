@@ -206,11 +206,12 @@
         </div>
     </div>
 
-    <div id="myHeader">
+    <div id="myHeader" >
+        <div>
         <div class="container-fluid Header">
             <div class="row ">
 
-                <div class="col-12  short_contact_list">
+                <div class="col-12  short_contact_list  ">
 
                     <ul class="nav justify-content-center  TopHeader">
 
@@ -223,6 +224,8 @@
                 </div>
             </div>
         </div>
+        </div>
+
 
         <br/>
         <div class="container-fluid">
@@ -232,8 +235,8 @@
                
             </div>
         </div>
-
-        <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2 ">
+        <div >
+                    <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2 ">
             <div class="container">
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
                     <span class="navbar-toggler-icon"></span>
@@ -284,6 +287,8 @@
 
             </div>
         </nav>
+        </div>
+
 
     </div>
 
