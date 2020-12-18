@@ -1,14 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ZTechMasterPage.master" AutoEventWireup="true" CodeFile="BUTTERFLY_VALVE.aspx.cs" Inherits="BUTTERFLY_VALVE" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
 
     <link href="css/ProductCSS.css" rel="stylesheet" />
 
-          <%--<center><h1 style="font-family:'Times New Roman, Times, serif;'">BUTTERFLY VALVE </h1></center>--%>
+    <%--<center><h1 style="font-family:'Times New Roman, Times, serif;'">BUTTERFLY VALVE </h1></center>--%>
     <link rel="stylesheet" href="css/w3.css">
 
-    <p class="d-block text-center" style="font-family:'Times New Roman';font-size:xx-large">
-                        <%=ProductName %>
+    <p class="d-block text-center" style="font-family: 'Times New Roman'; font-size: xx-large">
+        <%=ProductName %>
     </p>
 
     <div>
@@ -39,26 +39,72 @@
     <br />
 
     <div class="card center">
-        <font size="5" color="#05376d">CONSTRUCTION FEATURES:</font>
-        <ul class="Mylst">
-            <asp:Repeater ID="Repeater1" runat="server">
-                <ItemTemplate>
-                    <li><%# Container.DataItem %>  </li>
-                </ItemTemplate>
-            </asp:Repeater>
-        </ul>
+        <div class="text-center">
+            <font size="5" color="#05376d">TEST PRESSURE :</font>
+            <div style="overflow-x: auto;">
+                <table class="ProductInfo w-50  centerDiv" border="1">
+
+                    <tr>
+                        <th rowspan="2">MATERIAL</th>
+                        <th rowspan="2">CLASS</th>
+                        <th colspan="2">SHELL</th>
+                        <th colspan="2">SEAT</th>
+                        <th colspan="2">AIR SEAT TEST</th>
+                    </tr>
+
+                    <tr>
+                        <th>PSIG</th>
+                        <th>KSCG</th>
+                        <th>PSIG</th>
+                        <th>KSCG</th>
+                        <th>PSIG</th>
+                        <th>KSCG</th>
+                    </tr>
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
     <br />
 
     <div class="card center">
-        <font size="5" color="#05376d">SIZE :</font>
-        <ul class="Mylst">
-            <asp:Repeater ID="Repeater2" runat="server">
-                <ItemTemplate>
-                    <li><%# Container.DataItem %>  </li>
-                </ItemTemplate>
-            </asp:Repeater>
-        </ul>
+        <div class="d-flex justify-content-center">
+            <div>
+                <font size="5" color="#05376d">CONSTRUCTION FEATURES :</font>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <ul class="Mylst">
+                <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <li><%# Container.DataItem %>  </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+
+    </div>
+    <br />
+
+    <div class="card center">
+        <div class="d-flex justify-content-center">
+            <div>
+                <font size="5" color="#05376d">SIZE :</font>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <ul class="Mylst">
+                <asp:Repeater ID="Repeater2" runat="server">
+                    <ItemTemplate>
+                        <li><%# Container.DataItem %>  </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+
     </div>
     <br />
 
