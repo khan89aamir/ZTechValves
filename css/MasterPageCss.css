@@ -32,7 +32,7 @@
     color: white;
     text-align: center;
     padding: 11px;
-    width:99%!important;
+    width: 99% !important;
 }
 
 .nav-link {
@@ -98,7 +98,7 @@
     width: 25%;
     height: auto;
     font-family: "Times New Roman", Times, serif;
-    border:none
+    border: none
 }
 
 body {
@@ -216,8 +216,8 @@ ul.Mylst li {
 
 ul.Mylst {
     padding: 30px;
-    font-size:20px;
-    align-content:center;
+    font-size: 20px;
+    align-content: center;
 }
 
 #about {
@@ -244,6 +244,7 @@ ul.Mylst {
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .MyHeader2 {
     background-color: #fcfcfc;
     box-shadow: 0 0 30px #343a40;
@@ -259,13 +260,12 @@ ul.Mylst {
     font-size: 18px;
     border: none;
     outline: none;
-  
     color: white;
     cursor: pointer;
     padding: 6px;
     border-radius: 50px;
-  
 }
+
 .sticky {
     position: fixed;
     top: 0;
@@ -275,12 +275,12 @@ ul.Mylst {
     .sticky + .content {
         padding-top: 102px;
     }
+
 #myBtn:hover {
-  
-   background-color:white;
-   box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    background-color: white;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-    .TopHeader{
-        font-size:large;    
-    }
+.TopHeader {
+    font-size: large;
+}
