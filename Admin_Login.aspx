@@ -95,6 +95,8 @@
                 element.classList.remove("invisible");
                 element.classList.add("visible");
             }
+
+           
         }
 
         //function SendMail() {
