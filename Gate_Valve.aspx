@@ -2,112 +2,15 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
-    <link href="css/ProductCSS.css" rel="stylesheet" />
+    <link href="/css/ProductCSS.css" rel="stylesheet" />
     <style>
-        .carousel-indicators li {
-            width: 10px;
-            height: 10px;
-            border-radius: 100%;
-            background-color: gray;
-        }
-
-
-        .carousel-indicators .active {
-            background-color: navy;
-        }
-
-        .carousel-indicators li {
-            width: 10px;
-            height: 10px;
-            border-radius: 100%;
-        }
-
-        .carousel-indicators {
-        }
-
-        .carousel-control-prev-icon {
-            background-image: url("img/left.png");
-            height: 25px;
-            width: 25px;
-        }
-
-        .carousel-control-next-icon {
-            background-image: url("img/Right.png");
-            height: 25px;
-            width: 25px;
-        }
-
-            .carousel-control-next-icon:hover {
-                border-radius: 100%;
-                box-shadow: 0 0 20px blue;
-            }
-
-        .carousel-control-prev-icon:hover {
-            border-radius: 100%;
-            box-shadow: 0 0 20px blue;
-        }
-
-        /*Till the width of screen is above 1000 px*/
-        @media only screen and (min-width: 1200px) {
-            #carouselExampleIndicators {
-                width: 100%;
-                height: 100%;
-            }
-
-            #Button1 {
-                background-color: yellow;
-            }
-        }
-        /*Till the width of screen goes below 768 px*/
-        @media only screen and (max-width: 768px) {
-            #carouselExampleIndicators {
-                width: 100%;
-            }
-
-            #Button1 {
-                background-color: darkblue;
-            }
-        }
-        /*Till the width of screen goes below 768 px*/
-        @media screen and (max-width: 678px) and (min-width: 368px) {
-           
-            .carousel img {
-                width: 100% !important;
-                height: 245px;
-                max-height: 245px;
-                margin: auto;
-                display: block;
-            }
-        }
-
-        @media screen and (max-width: 600px) and (min-width: 471px) {
-            
-            .carousel img {
-                width: 100% !important;
-                height: 245px;
-                max-height: 245px;
-                margin: auto;
-                display: block;
-            }
-        }
-
-        @media screen and (max-width: 700px) and (min-width: 601px) {
-            
-            .carousel img {
-                width: 100% !important;
-                height: 245px;
-                max-height: 245px;
-                margin: auto;
-                display: block;
-            }
-        }
 
         .productHeading {
             font-family: Georgia, 'Times New Roman', Times, serif !important;
         }
 
     </style>
-    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="/css/w3.css">
 
     <p class="d-block text-center" style="font-family:'Times New Roman';font-size:xx-large">
         <%=ProductName %>
@@ -140,7 +43,7 @@
     <br />
     <div class="card center">
         <div class="text-center">
-             <font size="5" color="#05376d">TEST PRESSURE</font>
+             <font size="5" color="#05376d">TEST PRESSURE :</font>
           
     <div style="overflow-x: auto;">
             <table class="ProductInfo w-50  centerDiv"   border="1">
@@ -216,7 +119,7 @@ CF8 M
     <div class="card center">
         <div class="d-flex justify-content-center">
             <div >
-                  <font size="5" color="#05376d">CONSTRUCTION FEATURES: :</font>
+                  <font size="5" color="#05376d">CONSTRUCTION FEATURES :</font>
                
           </div>
         </div>

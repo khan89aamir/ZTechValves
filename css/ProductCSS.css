@@ -20,13 +20,13 @@
 }
 
 .carousel-control-prev-icon {
-    background-image: url("img/left.png");
+    background-image: url("/img/left.png");
     height: 25px;
     width: 25px;
 }
 
 .carousel-control-next-icon {
-    background-image: url("img/Right.png");
+    background-image: url("/img/Right.png");
     height: 25px;
     width: 25px;
 }
@@ -66,5 +66,27 @@
 
     #Button1 {
         background-color: darkblue;
+    }
+
+    @media screen and (max-width: 600px) and (min-width: 471px) {
+
+        .carousel img {
+            width: 100% !important;
+            height: 245px;
+            max-height: 245px;
+            margin: auto;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 700px) and (min-width: 601px) {
+
+        .carousel img {
+            width: 100% !important;
+            height: 245px;
+            max-height: 245px;
+            margin: auto;
+            display: block;
+        }
     }
 }

@@ -249,11 +249,9 @@
                                 <a id="btnGate" class="dropdown-item mt-1" style="font-size: small" href="Gate_Valve.aspx">GATE VALVE</a>
                                 <a id="btnGlob" class="dropdown-item mt-1" style="font-size: small" href="Globe_Valve.aspx">GLOBE VALVE</a>
                                 <a id="btnSwing" class="dropdown-item mt-1" style="font-size: small" href="Swing_Check_Valve.aspx">SWING CHECK VALVE</a>
-
-                                <a id="btnBall" class="dropdown-item mt-1" style="font-size: small" href="BALL_VALVE.aspx">BALL VALVE  </a>
+                                <a id="btnBall" class="dropdown-item mt-1" style="font-size: small" href="BALL_VALVE.aspx">BALL VALVE</a>
                                 <a id="Forged" class="dropdown-item mt-1" style="font-size: small" href="FORGED_VALVE.aspx">FORGED VALVE</a>
                                 <a id="BUTTERFLY" class="dropdown-item mt-1" style="font-size: small" href="BUTTERFLY_VALVE.aspx">BUTTERFLY VALVE</a>
-
 
                             </div>
                         </li>
@@ -433,7 +431,7 @@
 
                     <!--Copyright-->
                     <p class="text-center text-lg-center">
-                        © 2020 Copyright:SALKI VALVES
+                        © 2020 Copyright: SALKI VALVES
                     </p>
 
                 </div>
