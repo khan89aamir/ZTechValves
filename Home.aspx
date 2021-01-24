@@ -2,6 +2,124 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+  
+    <!-- CSS -->
+   
+    <link href="css/flickity.css" rel="stylesheet" />
+    <!-- JavaScript -->
+    <script src="css/flickity.pkgd.js"></script>
+    <style>
+     /* external css: flickity.css, fullscreen.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel2 {
+  background: #222;
+}
+
+.flickity-viewport {
+  height: 400px!important;
+    touch-action: pan-y;   
+     overflow: hidden;
+    position: relative
+ }
+.carousel-cell-image {
+  display: block;
+ 
+ width:100%;
+ height:500px!important;
+}
+
+ @media screen and (max-width: 700px) and (min-width: 300px) {
+    .flickity-viewport {
+      height: 250px!important;
+                 
+   }
+  .carousel-cell-image {
+              
+                 height:300px!important;
+                }
+            .SliderCap {
+                top:57%!important;
+                  font-weight:400!important;
+                font-size:medium!important;
+                  width:85%!important;
+                }
+            
+   }
+.carousel-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+
+
+.carousel.is-fullscreen .carousel-cell-image {
+  max-width: 100%;
+}
+.flickity-prev-next-button.previous {
+    left: 10px;
+    width: 30px;
+    height: 30px;
+}
+.flickity-prev-next-button.next
+                    {
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+  .SliderCap{
+            z-index:10000;
+            background-color:black;
+            color:white;
+            padding:8px;
+            position:absolute;
+            top:100%;
+           opacity:0.7;
+            border-radius:10px;
+            width:75%;
+        text-align:center;
+       font-family:'Times New Roman', Times, serif;
+          font-weight:600;
+          font-size:large;
+
+        }
+            .flickity-page-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 4px 4px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: .25;
+    cursor: pointer;
+}
+    .flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 1px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+}
+    </style>
+
+
+
     <style>
         .carousel-indicators li {
             width: 10px;
@@ -156,8 +274,46 @@
             min-width: 100px;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
+      
     </style>
     <link rel="stylesheet" href="css/w3.css">
+   
+
+
+<!-- Flickity HTML init -->
+<div class="carousel2" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image"
+      data-flickity-lazyload="img/banner/banner1.jpg" />
+ <div class="SliderCap"> Your Company Caption for Slider No : 01 </div>
+      
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image"
+      data-flickity-lazyload="img/banner/banner2.jpg" />
+      <div class="SliderCap"> Your Company Caption for Slider No : 02 </div>
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image"
+      data-flickity-lazyload="img/banner/banner3.jpg" />
+      <div class="SliderCap"> Your Company Caption for Slider No : 03 </div>
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image"
+     data-flickity-lazyload="img/banner/banner4.jpg" />
+      <div class="SliderCap"> Your Company Caption for Slider No : 04 </div>
+  </div>
+ <div class="carousel-cell">
+    <img class="carousel-cell-image"
+     data-flickity-lazyload="img/banner/banner5.jpg" />
+      <div class="SliderCap"> Your Company Caption for Slider No : 05 </div>
+  </div>
+ 
+</div>
+
+
+    <br />
+    <br />
     <div>
         <div id="carouselExampleIndicators" class="carousel slide ml-auto mr-auto" data-ride="carousel" data-interval="2000">
 

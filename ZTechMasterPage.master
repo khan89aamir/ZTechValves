@@ -63,7 +63,7 @@
     <script>
 
         $(document).ready(function () {
-            $('.dropdown-menu a, #btnAdminPage, #btnAboutUS, #btnHome, #btnContactUs, #btnMyProfile, #btnLogout,  #btnDeleteImage').click(function (e) {
+            $('.dropdown-menu a, #btnAdminPage, #btnCertificates, #btnAboutUS, #btnHome, #btnContactUs, #btnMyProfile, #btnLogout,  #btnDeleteImage').click(function (e) {
 
                 if (e.currentTarget.id == "btnDeleteImage") {
 
@@ -215,10 +215,10 @@
 
                     <ul class="nav justify-content-center  TopHeader">
 
-                        <li class="mr-5"><a href="mailto:contact@ztechvalves.in"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>Info@salkivalves.com</a></li>
-                        <li class="mr-5"><a href="mailto:salkivalves@gmail.com"><i class="fa fa-envelope mr-1" style="color: cornflowerblue"></i>salkivalves@gmail.com</a></li>
-                        <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Gulam Rasool : +91 9137738202</a></li>
-                        <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: cornflowerblue"></i>Shakeel Ahmad : +91 9967716771</a></li>
+                        <li class="mr-5"><a href="mailto:contact@ztechvalves.in"><i class="fa fa-envelope mr-1" style="color: white"></i>Info@salkivalves.com</a></li>
+                        <li class="mr-5"><a href="mailto:salkivalves@gmail.com"><i class="fa fa-envelope mr-1" style="color: white"></i>salkivalves@gmail.com</a></li>
+                        <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: white"></i>Gulam Rasool : +91 9137738202</a></li>
+                        <li class="mr-5"><a href="#"><i class="fa fa-phone   mr-1" style="color: white"></i>Shakeel Ahmad : +91 9967716771</a></li>
                     </ul>
 
                 </div>
@@ -228,21 +228,16 @@
 
 
         <br/>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-           
-                <img class="img-fluid " width="520" src="img/SalkiBrandLogo.png" />
-               
-            </div>
-        </div>
+       
         <div id="myHeader">
                     <nav class="navbar navbar-light navbar-expand-md  justify-content-md-center justify-content-start mt-2 ">
             <div class="container">
+                 <img class="img-fluid " width="350" src="img/SalkiBrandLogo.png" />
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-
+                   
                 <div class="navbar-collapse collapse justify-content-between align-items-center w-100 " id="collapsingNavbar2">
                     <ul class="navbar-nav mx-auto text-md-center text-left MyMenu">
                         <li class="nav-item">
@@ -264,6 +259,9 @@
                         </li>
                         <li class="nav-item mr-4">
                             <a id="btnAdminPage" class="nav-link" href="Admin_Login.aspx">ADMIN</a>
+                        </li>
+                            <li class="nav-item mr-4">
+                            <a id="btnCertificates" class="nav-link" href="CertificatePage.aspx">CERTIFICATION</a>
                         </li>
                         <li class="nav-item mr-4">
                             <a id="btnAboutUS" class="nav-link " href="AboutUS.aspx">ABOUT US</a>

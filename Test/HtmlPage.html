@@ -1,76 +1,109 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <style>
+        /* external css: flickity.css, fullscreen.css */
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: sans-serif;
         }
 
-        .top-container {
-            background-color: #f1f1f1;
-            padding: 30px;
-            text-align: center;
+        .carousel {
+            background: #222;
         }
 
-        .header {
-            padding: 10px 16px;
-            background: #555;
-            color: #f1f1f1;
-        }
-
-        .content {
-            padding: 16px;
-        }
-
-        .sticky {
-            position: fixed;
-            top: 0;
+        .carousel-cell {
             width: 100%;
+            height: 300px;
+            margin-right: 10px;
+            /* center images in cells with flexbox */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-            .sticky + .content {
-                padding-top: 102px;
-            }
+        .carousel.is-fullscreen .carousel-cell {
+            height: 100%;
+        }
+
+        .carousel-cell-image {
+            display: block;
+            max-height: 100%;
+        }
+
+        .carousel.is-fullscreen .carousel-cell-image {
+            max-width: 100%;
+        }
+
     </style>
+
 </head>
+
 <body>
+    <h1>Flickity - fullscreen images wide</h1>
 
-
-
-    <div class="header" id="myHeader">
-        <h2>My Header</h2>
+    <!-- Flickity HTML init -->
+    <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/720/540/?image=517" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/540/720/?image=696" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/720/540/?image=56" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/800/500/?image=1084" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/720/540/?image=1080" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/640/640/?image=1074" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/720/540/?image=1069" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/800/500/?image=1062" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/720/540/?image=1002" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/640/640/?image=935" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/720/540/?image=855" />
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image"
+                 data-flickity-lazyload="https://picsum.photos/640/640/?image=824" />
+        </div>
     </div>
 
-    <div class="content">
-        <h3>On Scroll Sticky Header</h3>
-        <p>The header will stick to the top when you reach its scroll position.</p>
-        <p>Scroll back up to remove the sticky effect.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-    </div>
 
-    <script>
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-    </script>
 
 </body>
+
 </html>
