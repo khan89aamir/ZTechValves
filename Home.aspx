@@ -17,6 +17,7 @@ body { font-family: sans-serif; }
 
 .carousel2 {
   background: #222;
+  cursor:pointer!important;
 }
 
 .flickity-viewport {
@@ -30,6 +31,7 @@ body { font-family: sans-serif; }
  
  width:100%;
  height:500px!important;
+ cursor:default;
 }
 
  @media screen and (max-width: 700px) and (min-width: 300px) {
@@ -281,7 +283,7 @@ body { font-family: sans-serif; }
 
 
 <!-- Flickity HTML init -->
-<div class="carousel2" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+<div class="carousel2" data-flickity='{ "autoPlay": 2000 , "lazyLoad": 1 }'>
   <div class="carousel-cell">
     <img class="carousel-cell-image"
       data-flickity-lazyload="img/banner/banner1.jpg" />
@@ -289,22 +291,22 @@ body { font-family: sans-serif; }
       
   </div>
   <div class="carousel-cell">
-    <img class="carousel-cell-image"
+    <img class="carousel-cell-image img-fluid"
       data-flickity-lazyload="img/banner/banner2.jpg" />
       <div class="SliderCap"> Your Company Caption for Slider No : 02 </div>
   </div>
   <div class="carousel-cell">
-    <img class="carousel-cell-image"
+    <img class="carousel-cell-image img-fluid"
       data-flickity-lazyload="img/banner/banner3.jpg" />
       <div class="SliderCap"> Your Company Caption for Slider No : 03 </div>
   </div>
   <div class="carousel-cell">
-    <img class="carousel-cell-image"
+    <img class="carousel-cell-image img-fluid"
      data-flickity-lazyload="img/banner/banner4.jpg" />
       <div class="SliderCap"> Your Company Caption for Slider No : 04 </div>
   </div>
  <div class="carousel-cell">
-    <img class="carousel-cell-image"
+    <img class="carousel-cell-image img-fluid"
      data-flickity-lazyload="img/banner/banner5.jpg" />
       <div class="SliderCap"> Your Company Caption for Slider No : 05 </div>
   </div>
